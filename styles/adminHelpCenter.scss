@@ -1,0 +1,147 @@
+@import './styles.scss';
+.page-content {
+	height: fit-content !important;
+}
+.content-windows {
+	display: flex !important;
+	flex-direction: column;
+	margin-top: vw(30px) !important;
+	height: fit-content !important;
+	.categories {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		column-gap: vw(20px);
+		div {
+			background-color: rgb(250, 250, 250);
+			border-radius: vw(4px);
+			padding: vw(20px) vw(20px) vw(20px);
+			transition: all 0.3s ease;
+			box-shadow: 0px vw(2px) vw(4px) rgba(0, 0, 0, .2);
+			h3 {
+				@include textFormat('Open Sans', vw(18px), 600, #363636);
+			}
+			h4 {
+				margin-top: vw(15px);
+				@include textFormat('Open Sans', vw(15px), 500, #535353);
+			}
+			i {
+				font-size: vw(50px);
+				color: #ef6c35;
+				margin-bottom: vw(15px);
+			}
+			&:hover {
+				cursor: pointer;
+				transform: translateY(vw(-10px)) scale(1.05);
+			}
+		}
+	}
+	hr {
+		display: none;
+		margin: vw(5px) 0px;
+		border-top-color: #828282;
+	}
+	.categories-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		column-gap: vw(15px);
+		row-gap: vw(15px);
+		.categoryContent {
+			background-color: rgb(250, 250, 250);
+			box-shadow: 0px vw(2px) vw(4px) rgba(0, 0, 0, .2);
+			border-radius: vw(4px);
+			padding: vw(15px);
+			display: flex;
+			flex-direction: column;
+			.categoryTitle {
+				@include textFormat('Open Sans',vw(19px)!important,600,#EF6C35);
+			}
+			.titleButton {
+				display: flex;
+				flex-direction: column;
+				margin-top: vw(20px);
+				button {
+					background-color: transparent;
+					border: none;
+					outline: none;
+					margin-bottom: vw(3px);
+					@include textFormat('Open Sans', vw(16px), 500, #363636);
+					text-align: left;
+					text-decoration: underline;
+					&:hover {
+						cursor: pointer;
+						color: rgb(206, 206, 206);
+						transition: all 0.25s ease;
+					}
+				}
+			}
+		}
+	}
+}
+//Confirm popout box
+.container {
+	width: vw(600px);
+	margin: 0 auto;
+}
+.fa-exclamation-triangle {
+	color: rgb(204, 52, 52);
+}
+.fa-check-circle {
+	color: green;
+}
+.popout-title {
+	@include textFormat('Open Sans', vw(16px), 600, rgb(17, 17, 17));
+}
+.popout-content {
+	@include textFormat('Open Sans', vw(15px),500, rgb(34, 34, 34));
+}
+#jconfirm-box33420 {
+	overflow: hidden;
+}
+.jconfirm-buttons {
+	button {
+		text-transform: capitalize !important;
+		outline: none;
+	}
+}
+.jconfirm-content {
+	overflow: visible !important;
+	height: fit-content !important;
+}
+
+.fa-edit {
+	color: green;
+}
+
+textarea {
+	resize: none;
+}
+
+#title,
+#content {
+	@include textFormat('Open Sans', vw(15px),500, rgb(34, 34, 34));
+	margin-bottom: vw(5px);
+}
+#content {
+	margin-top: vw(10px);
+}
+.form {
+	input,
+	textarea {
+		outline: none;
+	}
+	input {
+		padding: vw(5px);
+		@include textFormat('Open Sans', vw(15px),600, rgb(34, 34, 34));
+		width: vw(542px);
+	}
+	#contentDescription {
+		padding: vw(10px);
+		width: vw(535px) !important;
+		@include textFormat('Open Sans', vw(14px),500, rgb(34, 34, 34));
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+}
+.page-content {
+	backdrop-filter: none !important;
+}

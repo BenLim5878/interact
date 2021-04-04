@@ -1,0 +1,338 @@
+@mixin resetStylesheet() {
+	html,
+	body,
+	div,
+	span,
+	object,
+	iframe,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	blockquote,
+	pre,
+	abbr,
+	address,
+	cite,
+	code,
+	del,
+	dfn,
+	em,
+	img,
+	ins,
+	kbd,
+	q,
+	samp,
+	small,
+	strong,
+	sub,
+	sup,
+	var,
+	b,
+	i,
+	dl,
+	dt,
+	dd,
+	ol,
+	ul,
+	li,
+	fieldset,
+	form,
+	label,
+	legend,
+	table,
+	caption,
+	tbody,
+	tfoot,
+	thead,
+	tr,
+	th,
+	td,
+	article,
+	aside,
+	canvas,
+	details,
+	figcaption,
+	figure,
+	footer,
+	header,
+	hgroup,
+	menu,
+	nav,
+	section,
+	summary,
+	time,
+	mark,
+	audio,
+	video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		background: transparent;
+	}
+
+	body {
+		line-height: 1;
+	}
+
+	article,
+	aside,
+	details,
+	figcaption,
+	figure,
+	footer,
+	header,
+	hgroup,
+	menu,
+	nav,
+	section {
+		display: block;
+	}
+
+	nav ul {
+		list-style: none;
+	}
+
+	blockquote,
+	q {
+		quotes: none;
+	}
+
+	blockquote:before,
+	blockquote:after,
+	q:before,
+	q:after {
+		content: '';
+		content: none;
+	}
+
+	a {
+		margin: 0;
+		padding: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		background: transparent;
+	}
+
+	ins {
+		background-color: #ff9;
+		color: #000;
+		text-decoration: none;
+	}
+
+	mark {
+		background-color: #ff9;
+		color: #000;
+		font-style: italic;
+		font-weight: bold;
+	}
+
+	del {
+		text-decoration: line-through;
+	}
+
+	abbr[title],
+	dfn[title] {
+		border-bottom: 1px dotted;
+		cursor: help;
+	}
+
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+	hr {
+		display: block;
+		height: 1px;
+		border: 0;
+		border-top: 1px solid #cccccc;
+		margin: 1em 0;
+		padding: 0;
+	}
+
+	input,
+	select {
+		vertical-align: middle;
+	}
+}
+
+@include resetStylesheet();
+@import './footer.scss';
+@import './header.scss';
+@function vw($px-vw, $base-vw: 1920px) {
+	@return ($px-vw * 100vw) / $base-vw;
+}
+
+@keyframes fadeInContent {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes widen {
+	0% {
+		margin-right: vw(5px);
+	}
+	100% {
+		margin-right: vw(20px);
+	}
+}
+@keyframes shrink {
+	from {
+		margin-right: vw(20px);
+	}
+	to {
+		margin-right: vw(5px);
+	}
+}
+
+$black: #3a2d28;
+
+body {
+	width: 100%;
+	height: fit-content;
+	overflow-y: scroll;
+}
+
+.wrapper {
+	width: 73.75vw;
+	height: fit-content;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+a {
+	text-decoration: none;
+}
+
+.inner-wrapper {
+	width: 51.041666666666666666666666666667vw;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	margin: vw(35px) auto vw(100px);
+}
+
+#help-back {
+	display: flex;
+	flex-direction: row;
+	width: fit-content;
+	height: vw(35px);
+	&:hover h5,
+	&:hover div svg path {
+		color: #9f4a27;
+		transition: all 0.10s ease-in;
+		fill: #9f4a27;
+	}
+	&:hover div {
+		margin-right: vw(25px);
+	}
+	h5 {
+		@include textFormat ('Open Sans', vw(24.5px), 600, $primaryColor);
+		width: fit-content;
+		height: fit-content;
+	}
+	div {
+		margin: vw(4px) vw(5px) 0px 0px;
+		width: fit-content;
+		height: fit-content;
+		transition: margin 0.5s ease;
+		svg {
+			width: vw(26px);
+			height: vw(13px);
+		}
+	}
+}
+
+.rulesRegulation-content {
+	width: fit-content;
+	height: fit-content;
+	margin-top: vw(50px);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	#title {
+		width: fit-content;
+		height: fit-content;
+		margin: 0px 0px vw(35px) 0px;
+		display: block !important;
+		animation: none;
+		h1 {
+			@include textFormat('Open Sans', vw(38px), bold, $primaryColor);
+			width: fit-content;
+			height: fit-content;
+			line-height: vw(57px);
+		}
+		h3 {
+			@include textFormat('Open Sans',vw(25px), normal, #635250);
+			width: fit-content;
+			height: fit-content;
+			margin-top: vw(7px);
+			line-height: vw(46px);
+		}
+	}
+	button {
+		display: flex;
+		flex-direction: row;
+		background-color: #f7f4f2;
+		border-radius: vw(2px);
+		border: 0px;
+		outline: none;
+		width: 100% !important;
+		height: vw(100px);
+		margin-bottom: vw(20px);
+		&:hover {
+			background-color: #e2dcd8;
+			transition: all 0.1s ease-in;
+			cursor: pointer;
+		}
+		h2 {
+			margin: vw(33px) 0px vw(32px) 2vw;
+			@include textFormat ('Open Sans', vw(24px), 600, $black);
+			width: vw(400px);
+			text-align: left;
+		}
+		div {
+			margin: auto 0px auto 22.791vw;
+			display: block !important;
+			animation: none !important;
+			svg {
+				transition: 200ms ease;
+				transition-property: all;
+				transition-duration: 200ms;
+				transition-timing-function: ease;
+				transition-delay: 0s;
+				width: vw(26px);
+				height: vw(13px);
+			}
+		}
+	}
+	div {
+		margin: vw(33px) 0px vw(33px) 3.5416vw;
+		width: fit-content;
+		display: none;
+		flex-direction: column;
+		height: fit-content;
+		animation-name: fadeInContent;
+		animation-duration: 0.35s;
+		animation-timing-function: ease;
+		a {
+			@include textFormat('Open Sans', vw(21px), normal, black);
+			line-height: vw(50px);
+			&:hover {
+				color: $primaryColor;
+				transition: all 0.1s ease;
+			}
+		}
+	}
+}

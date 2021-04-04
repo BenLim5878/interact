@@ -1,0 +1,146 @@
+@import '../rules.scss';
+
+@include resetStylesheet;
+@function vw($px-vw, $base-vw: 1920px) {
+	@return ($px-vw * 100vw) / $base-vw;
+}
+
+a {
+	text-decoration: none;
+}
+
+// Disable animation
+.landingpage-header {
+	animation: none !important;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column !important;
+	flex-wrap: nowrap !important;
+}
+
+.seperator {
+	display: flex;
+	flex: row;
+	width: 100%;
+	height: fit-content;
+	margin-top: vw(50px);
+}
+
+// Format side menu
+.side-menu {
+	display: flex;
+	flex-direction: column;
+	width: 16vw;
+	height: fit-content;
+	margin-left: 3.125vw;
+	margin-top: vw(11px);
+	h5 {
+		@include textFormat('Open Sans', vw(22px), 600, black);
+		border-bottom: vw(1px) solid #d2d2d2;
+		height: vw(35px);
+	}
+	.side-menu-links {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: fit-content;
+		margin-top: vw(15px);
+		a {
+			@include textFormat('Open Sans', vw(20px), 400, #403E3E);
+			width: 100%;
+			height: fit-content;
+			display: block;
+			line-height: vw(35px);
+			margin-bottom: vw(10px);
+			padding: vw(5px) vw(10px);
+			border: vw(1px) solid transparent;
+			border-radius: vw(2px);
+			&:hover {
+				background-color: #969595c9;
+				color: white;
+				transition: all 0.15s ease;
+			}
+		}
+	}
+}
+
+.inner-wrapper {
+	margin: 0px 0 0px auto;
+	width: 51.6875vw;
+}
+
+#pathway-links {
+	display: flex;
+	flex-direction: row;
+	width: fit-content;
+	height: fit-content;
+	margin: vw(30px) 0px 0px 3.125vw;
+	a {
+		@include textFormat('Open Sans',vw(22px),600, $primaryColor );
+	}
+	div {
+		margin: vw(5px) vw(5px) 0px vw(5px);
+		width: fit-content;
+		height: fit-content;
+		svg {
+			width: vw(24px);
+			height: vw(12px);
+		}
+	}
+}
+
+//Format links when hover
+
+#help-back:hover,
+#rules-back:hover {
+	color: #9f4a27;
+	transition: all 0.10s ease-in;
+}
+
+//Format content box
+
+.help-contentsBox {
+	.main-header {
+		width: fit-content;
+		height: fit-content;
+		display: flex;
+		flex-direction: column;
+		.title {
+			@include textFormat('Open Sans', vw(36px), 600, black);
+			line-height: vw(45px);
+			width: fit-content;
+			height: fit-content;
+		}
+		h4 {
+			@include textFormat('Catamaran', vw(24px), normal, #989898);
+			line-height: vw(40px);
+			width: fit-content;
+			height: fit-content;
+			display: inline-block;
+		}
+	}
+	.help-contents {
+		height: fit-content;
+		width: 100%;
+		margin: vw(50px) 0px vw(50px);
+		textarea {
+			@include textFormat('Catamaran', vw(24px), 400, black);
+			line-height: vw(45.92px);
+			width: 100%;
+			height: 100%;
+			resize: none;
+			border: none;
+			overflow-y: hidden;
+			outline: none;
+			text-align: left;
+		}
+	}
+}
+
+#current-link {
+	background-color: $primaryColor;
+	color: white;
+	transition: background-color 0.5s ease;
+}

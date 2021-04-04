@@ -1,0 +1,65 @@
+@mixin textFormat($font,$size,$weight,$color) {
+	font-family: $font;
+	font-size: $size;
+	font-weight: $weight;
+	color: $color;
+}
+
+@function vw($px-vw, $base-vw: 1920px) {
+	@return ($px-vw * 100vw) / $base-vw;
+}
+
+.wrapper {
+	#search-result-title {
+		@include textFormat("Open Sans",vw(26px),600 ,black );
+		margin: vw(50px) 0 vw(20px) vw(60px);
+	}
+	.search-content {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin: vw(25px) auto vw(50px);
+		width: vw(1306px);
+		a {
+			margin-bottom: vw(20px);
+			margin-right: vw(20px);
+			width: fit-content;
+			text-decoration: none;
+			.article-box {
+				border: vw(1px) solid rgb(170, 170, 170);
+				padding: vw(10px) vw(15px);
+				width: vw(600px);
+				h3 {
+					@include textFormat('Open Sans', vw(20px), 600, black);
+				}
+				h4 {
+					margin: vw(10px) 0px;
+					@include textFormat('Open Sans', vw(16px), 600, rgb(36, 36, 36));
+				}
+				h5 {
+					@include textFormat('Open Sans', vw(15px), 500, rgb(36, 36, 36));
+					overflow: hidden;
+					text-overflow: ellipsis;
+					display: -webkit-box;
+					-webkit-line-clamp: 2; /* number of lines to show */
+					-webkit-box-orient: vertical;
+					line-height: vw(20px);
+				}
+				p {
+					margin-top: vw(10px);
+					@include textFormat('Open Sans', vw(14px), 500, rgb(36, 36, 36));
+				}
+			}
+			&:hover {
+				.article-box {
+					border-color: #ef6c35;
+					transition: all ease 0.25s;
+				}
+			}
+		}
+		#noResult {
+			@include textFormat('Open Sans', vw(20px), 600, black);
+			margin-bottom: vw(436px);
+		}
+	}
+}

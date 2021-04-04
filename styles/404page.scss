@@ -1,0 +1,112 @@
+@import './styles.scss';
+
+.content-window {
+	display: flex;
+	flex-direction: row;
+	margin: 0px auto 0px;
+	justify-content: center;
+	svg {
+		width: vw(900px);
+		position: relative;
+	}
+	section {
+		display: flex;
+		flex-direction: column;
+		margin-top: vw(290px);
+		h1 {
+			@include textFormat('Open Sans',vw(35px),700,rgb(27, 27, 27));
+		}
+		h2 {
+			@include textFormat('Open Sans',vw(26px),700,rgb(27, 27, 27));
+			margin: vw(15px) 0px vw(55px);
+		}
+		button {
+			padding: vw(6px) vw(15px);
+			@include textFormat('Open Sans',vw(18px),600,white);
+			border: none;
+			outline: none;
+			background-color: #ef6c35;
+			transition: all ease 0.3s;
+			border-radius: vw(3px);
+			&:hover {
+				cursor: pointer;
+				background-color: #a84d26;
+			}
+		}
+	}
+}
+
+svg#freepik_stories-oops-404-error-with-a-broken-robot:not(.animated) .animable {
+	opacity: 0;
+}
+
+svg#freepik_stories-oops-404-error-with-a-broken-robot.animated #freepik--background-simple--inject-6 {
+	animation: 1s 1 forwards cubic-bezier(.36, -0.01, .5, 1.38) fadeIn;
+	animation-delay: 0s;
+}
+
+svg#freepik_stories-oops-404-error-with-a-broken-robot.animated #freepik--Floor--inject-6 {
+	animation: 1s 1 forwards cubic-bezier(.36, -0.01, .5, 1.38) fadeIn;
+	animation-delay: 0s;
+}
+
+svg#freepik_stories-oops-404-error-with-a-broken-robot.animated #freepik--Text--inject-6 {
+	animation: 1s 1 forwards cubic-bezier(.36, -0.01, .5, 1.38) zoomOut;
+	animation-delay: 0s;
+}
+
+svg#freepik_stories-oops-404-error-with-a-broken-robot.animated #freepik--Plants--inject-6 {
+	animation: 1s 1 forwards cubic-bezier(.36, -0.01, .5, 1.38) slideDown;
+	animation-delay: 0s;
+}
+
+svg#freepik_stories-oops-404-error-with-a-broken-robot.animated #freepik--Character--inject-6 {
+	animation: 1s 1 forwards cubic-bezier(.36, -0.01, .5, 1.38) slideRight;
+	animation-delay: 0s;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes zoomOut {
+	0% {
+		opacity: 0;
+		transform: scale(1.5);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes slideDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-30px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideRight {
+	0% {
+		opacity: 0;
+		transform: translateX(30px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}

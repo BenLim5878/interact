@@ -1,0 +1,103 @@
+$titleText: #e1e1e1;
+$contentText: #a8a8a8;
+@function vw($px-vw, $base-vw: 1920px) {
+	@return ($px-vw * 100vw) / $base-vw;
+}
+
+@mixin noListLinkstyle {
+	list-style: none;
+	text-decoration: none;
+}
+
+@mixin textFormat($font,$size,$weight,$color) {
+	font-family: $font;
+	font-size: $size;
+	font-weight: $weight;
+	color: $color;
+}
+
+#footer {
+	width: vw(1416px);
+	height: vw(200px);
+	margin: 0 auto;
+	background-color: #242729;
+	display: flex;
+	flex-direction: row;
+}
+
+footer {
+	background-color: #242729;
+	height: vw(300px);
+}
+
+#footer-menu,
+#footer-support {
+	width: vw(204px);
+	height: vw(249px);
+	display: flex;
+	flex-flow: row wrap;
+	margin: vw(43px) 0 0 0px;
+	img {
+		width: vw(40px) !important;
+		height: vw(40px) !important;
+		margin-top: vw(6px) !important;
+		margin-left: vw(23px) !important;
+		margin-right: 0px !important;
+		margin-bottom: 0px !important;
+	}
+}
+
+#footer h3 {
+	width: fit-content;
+	@include textFormat('Open Sans',vw(26px),600,$titleText);
+	line-height: vw(25px);
+	height: vw(30px);
+	margin: vw(18px) 0 0 vw(14px);
+}
+
+#footer ul {
+	margin-left: vw(75px);
+	li {
+		@include noListLinkstyle();
+		margin-bottom: vw(25px);
+		a {
+			@include textFormat('Open Sans', vw(19px), 600, $contentText);
+			@include noListLinkstyle();
+		}
+	}
+}
+
+#footer a:hover {
+	color: #747272;
+	transition: color 0.15s ease-in;
+}
+
+#footer-support ul {
+	margin: 0 auto vw(50px);
+}
+
+#footer-support ul li a {
+	margin-left: vw(40px);
+	width: fit-content;
+}
+
+#footer-support {
+	margin-left: vw(200px) !important;
+	width: vw(300px);
+}
+
+#footer-support h3 {
+	margin: vw(18px) 0 0 vw(65px) !important;
+}
+
+#deco-line {
+	height: vw(220px);
+	border: vw(1px) solid #a8a8a8;
+	margin: vw(36px) 0 0 vw(250px);
+}
+
+#footer h4 {
+	@include textFormat('Open Sans', vw(16px), 600, #A8A8A8);
+	margin: 0 auto;
+	align-self: flex-end;
+}

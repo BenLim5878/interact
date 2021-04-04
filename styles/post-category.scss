@@ -1,0 +1,105 @@
+@import './userPage.scss';
+@function vw($px-vw, $base-vw: 1920px) {
+	@return ($px-vw * 100vw) / $base-vw;
+}
+
+@keyframes showUp {
+	0% {
+		opacity: 0%;
+		transform: translateY(vw(25px)) scale(0.95);
+	}
+	100% {
+		opacity: 100%;
+		transform: translateY((0px));
+	}
+}
+
+body {
+	background-color: #f0f0f0;
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+}
+.content-window {
+	position: absolute;
+	top: vw(95px);
+	z-index: 10;
+	width: fit-content;
+	left: vw(480px);
+	.search-category {
+		width: vw(275px);
+		height: vw(22px);
+		border-bottom: vw(1px) solid #b4b4b4;
+		padding: vw(8px) 0px;
+		input {
+			width: 95%;
+			height: 100%;
+			background-color: transparent;
+			border: 0px;
+			outline: none;
+			padding-right: 5%;
+			@include textFormat('Open Sans',vw(16px), 400,#696969);
+			&::placeholder {
+				@include textFormat('Open Sans',vw(15px), 400,#9c9c9c);
+			}
+			&:focus {
+				&::placeholder {
+					color: transparent;
+					transform: translateY(-10px) translateX(-21px) scale(0.8);
+					transition: all 0.15s ease-in-out;
+				}
+			}
+		}
+		&::after {
+			content: "Search:";
+			@include textFormat('Open Sans',vw(15px), 300,transparent);
+			position: absolute;
+			top: 10px;
+			left: 7px;
+		}
+		&:focus-within {
+			border-bottom: 1px solid #ef6c35 !important;
+			&::after {
+				color: #ef6c35;
+				top: -10px;
+				left: 0px;
+				transition: all 0.3s ease-in-out;
+			}
+		}
+	}
+	.category-list {
+		width: 100%;
+		margin-top: vw(40px);
+		margin-bottom: vw(125px);
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		row-gap: vw(15px);
+		column-gap: vw(15px);
+		.categoryCard {
+			width: vw(250px);
+			height: vw(100px);
+			overflow: hidden;
+			background-color: rgba(255, 255, 255, .6);
+			border-radius: 3px;
+			padding: vw(10px) vw(10px);
+			transition: all 0.4s ease;
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.13);
+			h3 {
+				@include textFormat('Open Sans', vw(20px), 600, #686868);
+				transition: all 0.4s ease;
+			}
+			&:hover {
+				cursor: pointer;
+				transform: translateY(vw(-5px)) scale(1.05);
+				background-color: rgb(230, 230, 230);
+				h3 {
+					color: #ef6c35;
+				}
+			}
+		}
+		#noResult {
+			@include textFormat('Open Sans', vw(20px), 600, #4e4e4e);
+			display: none;
+		}
+	}
+}

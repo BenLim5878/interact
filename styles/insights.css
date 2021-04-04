@@ -1,0 +1,250 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+.highcharts-background {
+  fill: rgba(255, 255, 255, 0.8) !important;
+}
+
+.highcharts-title {
+  font-family: "Open Sans";
+  font-size: 0.88542vw !important;
+  font-weight: 500;
+  color: black;
+}
+
+text {
+  font-family: "Open Sans";
+  font-size: 0.625vw !important;
+  font-weight: 600;
+  color: black;
+}
+
+.highcharts-axis-title {
+  fill: black !important;
+}
+
+.content-windows {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  overflow-y: scroll;
+}
+
+.content-windows::-webkit-scrollbar {
+  width: 0.41667vw;
+}
+
+.content-windows::-webkit-scrollbar-thumb {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.content-windows::-webkit-scrollbar-thumb:hover {
+  background-color: #929292;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+.content-windows #postPerDayStats {
+  width: 28.64583vw;
+  height: 15.625vw;
+}
+
+.content-windows #categoryTrendStats {
+  width: 27.08333vw;
+  height: 15.625vw;
+}
+
+.content-windows #proportionUserStats {
+  width: 14.58333vw;
+  height: 15.625vw;
+}
+
+.content-windows #categoryPostStats {
+  width: 16.14583vw;
+  height: 15.625vw;
+}
+
+.content-windows #categoryViewStats {
+  width: 44.27083vw;
+  height: 15.625vw;
+}
+
+.content-windows div {
+  border-radius: 0.15625vw;
+  -webkit-box-shadow: 0px 0.10417vw 0.20833vw rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0.10417vw 0.20833vw rgba(0, 0, 0, 0.3);
+}
+/*# sourceMappingURL=insights.css.map */

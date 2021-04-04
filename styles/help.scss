@@ -1,0 +1,365 @@
+@import './styles.scss';
+@mixin resetStylesheet() {
+	html,
+	body,
+	div,
+	span,
+	object,
+	iframe,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	blockquote,
+	pre,
+	abbr,
+	address,
+	cite,
+	code,
+	del,
+	dfn,
+	em,
+	img,
+	ins,
+	kbd,
+	q,
+	samp,
+	small,
+	strong,
+	sub,
+	sup,
+	var,
+	b,
+	i,
+	dl,
+	dt,
+	dd,
+	ol,
+	ul,
+	li,
+	fieldset,
+	form,
+	label,
+	legend,
+	table,
+	caption,
+	tbody,
+	tfoot,
+	thead,
+	tr,
+	th,
+	td,
+	article,
+	aside,
+	canvas,
+	details,
+	figcaption,
+	figure,
+	footer,
+	header,
+	hgroup,
+	menu,
+	nav,
+	section,
+	summary,
+	time,
+	mark,
+	audio,
+	video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		background: transparent;
+	}
+
+	body {
+		line-height: 1;
+	}
+
+	article,
+	aside,
+	details,
+	figcaption,
+	figure,
+	footer,
+	header,
+	hgroup,
+	menu,
+	nav,
+	section {
+		display: block;
+	}
+
+	nav ul {
+		list-style: none;
+	}
+
+	blockquote,
+	q {
+		quotes: none;
+	}
+
+	blockquote:before,
+	blockquote:after,
+	q:before,
+	q:after {
+		content: '';
+		content: none;
+	}
+
+	a {
+		margin: 0;
+		padding: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		background: transparent;
+	}
+
+	ins {
+		background-color: #ff9;
+		color: #000;
+		text-decoration: none;
+	}
+
+	mark {
+		background-color: #ff9;
+		color: #000;
+		font-style: italic;
+		font-weight: bold;
+	}
+
+	del {
+		text-decoration: line-through;
+	}
+
+	abbr[title],
+	dfn[title] {
+		border-bottom: 1px dotted;
+		cursor: help;
+	}
+
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+	hr {
+		display: block;
+		height: 1px;
+		border: 0;
+		border-top: 1px solid #cccccc;
+		margin: 1em 0;
+		padding: 0;
+	}
+
+	input,
+	select {
+		vertical-align: middle;
+	}
+}
+@import './footer.scss';
+@import './header.scss';
+@include resetStylesheet();
+@function vw($px-vw, $base-vw: 1920px) {
+	@return ($px-vw * 100vw) / $base-vw;
+}
+
+body {
+	width: 100%;
+}
+
+main {
+	height: fit-content;
+}
+
+.wrapper {
+	width: 73.75vw;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+img {
+	width: 48.4375vw;
+	height: vw(344px);
+	object-fit: cover;
+	margin: vw(33px) auto vw(22px);
+}
+
+#searchBar svg {
+	fill: #989898;
+	width: vw(21px);
+	height: vw(21px);
+	padding: vw(14px) 1.0416vw;
+}
+
+#searchBar {
+	width: 37.55208vw;
+	height: vw(47px);
+	border: vw(1px) solid #c5c3c1;
+	display: flex;
+	flex-direction: row;
+	form {
+		input {
+			height: 100%;
+			width: vw(650px);
+			border: none;
+			padding: 0px 0.52083vw 0 0;
+			@include textFormat('Open Sans', vw(20px), normal, black);
+			&:focus {
+				outline: none;
+			}
+			&::placeholder {
+				@include textFormat('Open Sans', vw(20px), normal, #989898);
+			}
+		}
+	}
+}
+
+#helpPage-title {
+	width: 38.69791vw;
+	height: vw(120px);
+	display: flex;
+	flex-flow: column nowrap;
+	margin: vw(50px) auto 0;
+}
+
+#helpPage-title h2 {
+	@include textFormat('Open Sans', vw(33px), 700, black);
+	width: fit-content;
+	height: fit-content;
+	margin: 0 auto vw(22px);
+}
+
+#personalSupport {
+	width: 47.447916vw;
+	height: fit-content;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+#personalSupport #line-deco {
+	border-top: vw(1px) solid #c5c3c1;
+	width: 100%;
+}
+
+#personalSupport h3 {
+	@include textFormat ('Catamaran',vw(24px), 500, black);
+	width: fit-content;
+	height: fit-content;
+	margin: vw(34px) auto vw(19px);
+}
+
+#personalSupport #logIn {
+	width: 24.322916666666666666666666666667vw;
+	height: vw(25px);
+	padding: vw(13px) 0;
+	background-color: $primaryColor;
+	text-align: center;
+	text-decoration: none;
+	margin: 0 auto vw(34px);
+	&:hover {
+		background-color: #c85f33;
+		transition: all 0.2s ease-in-out;
+	}
+	h4 {
+		@include textFormat('Open Sans', vw(22px), bold, white);
+	}
+}
+
+#personalSupport a {
+	@include textFormat('Catamaran',vw(20px), 400, $primaryColor);
+	width: fit-content;
+	height: fit-content;
+	margin: 0 auto vw(25px);
+	text-decoration: none;
+	&:hover {
+		color: #9f4a27;
+		transition: all 0.15s ease-in;
+	}
+}
+
+#relatedTopics {
+	display: flex;
+	flex-direction: column;
+	width: 62.656vw;
+	height: fit-content;
+	margin: vw(75px) auto;
+	h2 {
+		@include textFormat('Catamaran',vw(25px), 400, #6A5F59);
+		width: fit-content;
+		height: fit-content;
+	}
+}
+
+.topics {
+	width: 100%;
+	margin: vw(20px) auto 0;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	grid-gap: vw(25px);
+	#topic {
+		border: vw(1px) solid #e2e6e8;
+		height: vw(150px);
+		width: 30.5729vw;
+		padding-top: vw(33px);
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		text-decoration: none;
+		border-radius: vw(2px);
+		&:hover {
+			border: vw(1px) solid $primaryColor;
+			transition: all 0.15s ease-in;
+		}
+		#topic-image {
+			background-image: url('../materials/logo/logo-transparent.png');
+			width: vw(76px);
+			height: vw(76px);
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			margin: 0px 2.6562vw 0px vw(48px);
+		}
+		#topic-svg {
+			width: fit-content;
+			height: fit-content;
+			margin: 0px 2.6562vw 0px vw(48px);
+			svg {
+				width: vw(76px);
+				height: vw(76px);
+			}
+		}
+		#topic-content {
+			display: flex;
+			flex-direction: column;
+			width: 18.64583vw;
+			height: vw(119px);
+			h3 {
+				@include textFormat('Open Sans',vw(24px),bold,#312622);
+				width: fit-content;
+				height: fit-content;
+				margin-bottom: vw(8px);
+			}
+			h4 {
+				@include textFormat('Open Sans',vw(19px), 300, #635350);
+				width: fit-content;
+				height: fit-content;
+				line-height: vw(38px);
+			}
+		}
+	}
+}
+
+footer {
+	background-color: #242729;
+	height: vw(300px);
+}

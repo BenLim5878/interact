@@ -1,0 +1,556 @@
+@import './rules.scss';
+@import './styles.scss';
+@include resetStylesheet();
+main {
+	width: 100vw;
+	height: 100vh;
+	background-color: white;
+	background-size: contain;
+	background-position: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow-y: scroll;
+}
+@keyframes reveal {
+	from {
+		opacity: 0%;
+		transform: translateY(vw(-10px)) scale(.95);
+		height: 0px;
+	}
+	to {
+		opacity: 100%;
+	}
+}
+@keyframes slidedown {
+	0% {
+		top: vw(-100px);
+		opacity: 0%;
+	}
+	50% {
+		top: vw(70px);
+		opacity: 100%;
+	}
+	100% {
+		top: vw(-100px);
+		opacity: 0%;
+	}
+}
+@keyframes movedown {
+	0% {
+		top: vw(85px);
+	}
+	50% {
+		top: vw(130px);
+	}
+	100% {
+		top: vw(85px);
+	}
+}
+.contentWindow {
+	display: flex;
+	flex-direction: row;
+	height: fit-content;
+	overflow-y: scroll !important;
+	.successmessage {
+		display: flex;
+		flex-direction: row;
+		width: 33.854166666666vw;
+		height: vw(37px);
+		position: absolute;
+		top: vw(-100px);
+		z-index: -1;
+		background-color: #25d24b;
+		box-shadow: 0px vw(2px) vw(4px) rgba(0, 0, 0, 0.25);
+		border-radius: vw(2px);
+		justify-content: center;
+		left: 28.90625vw;
+		svg {
+			width: vw(20px);
+			height: vw(20px);
+			fill: #f9f9f9;
+			margin-top: vw(8px);
+		}
+		h6 {
+			@include textFormat('Open Sans', vw(15px), 600, #F9F9F9);
+			margin-top: vw(8px);
+			line-height: vw(20px);
+			margin-left: 1.354166666666vw;
+		}
+	}
+	#back {
+		position: fixed;
+		top: vw(90px);
+		left: 19.75vw;
+		display: flex;
+		flex-direction: row;
+		width: fit-content;
+		height: fit-content;
+		h5 {
+			@include textFormat('Open Sans', vw(20px), 600, #535353);
+			line-height: vw(16px);
+			width: fit-content;
+			margin-left: vw(11px);
+		}
+		&:hover h5,
+		&:hover div svg path {
+			color: #ef6c35;
+			transition: all 0.10s ease-in;
+			fill: #ef6c35;
+		}
+		&:hover div {
+			margin-right: vw(25px);
+		}
+		div {
+			transition: margin 0.3s ease;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	.post-content {
+		position: absolute;
+		top: vw(85px);
+		width: 35.78vw;
+		left: 27.8645833vw;
+		.posts-content {
+			width: 33.48958333333vw;
+			margin: 0 auto;
+			h2 {
+				@include textFormat('Open Sans', vw(20px), 600, $primaryColor);
+				line-height: vw(25px);
+			}
+			h4 {
+				@include textFormat('Open Sans', vw(15px), normal, #535353);
+				margin: vw(5px) 0 0px 0px;
+			}
+			a {
+				color: #06c;
+			}
+			h5 {
+				@include textFormat('Open Sans', vw(14px), normal, #535353);
+			}
+			.contentDetails {
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				h5 {
+					@include textFormat('Open Sans', vw(14px), normal, #363636);
+				}
+				button {
+					background-color: transparent;
+					width: fit-content;
+					height: fit-content;
+					border: none;
+					outline: none;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					svg {
+						fill: #363636;
+					}
+					&:hover {
+						cursor: pointer;
+						svg {
+							fill: #ef6c35;
+							transition: all 0.25s ease;
+						}
+					}
+				}
+				.option-container {
+					position: absolute;
+					display: none;
+					top: vw(117px);
+					left: 30.09166666666vw;
+					background-color: white;
+					box-shadow: 0px vw(2px) vw(4px) rgba(0, 0, 0, 0.25);
+					width: 7.39583333vw;
+					height: vw(80px);
+					padding: vw(20px) 0;
+					z-index: 70;
+					animation: reveal 0.2s cubic-bezier(0.6, 0.2, 0.1, 1);
+					a {
+						display: flex;
+						flex-direction: row;
+						margin: auto vw(25px);
+					}
+					#edit-button {
+						svg {
+							fill: #0085ff;
+							margin: auto 0;
+							margin-right: 1.054166666vw;
+						}
+						h6 {
+							@include textFormat('Open Sans', vw(17px), 600, #0085ff);
+							margin: auto 0;
+						}
+						&:hover {
+							svg {
+								fill: #0a69c2;
+								transition: all 0.2s ease;
+							}
+							h6 {
+								color: #0a69c2;
+								transition: all 0.2s ease;
+							}
+							cursor: pointer;
+						}
+					}
+					#delete-button {
+						margin-top: vw(35px);
+						svg {
+							fill: #ff002e;
+							margin: auto 0;
+							margin-right: 0.864166666vw;
+						}
+						h6 {
+							@include textFormat('Open Sans', vw(17px), 600, #ff002e);
+							margin: auto 0;
+						}
+						&:hover {
+							svg {
+								fill: #b10e2c;
+								transition: all 0.2s ease;
+							}
+							h6 {
+								color: #b10e2c;
+								transition: all 0.2s ease;
+							}
+							cursor: pointer;
+						}
+					}
+				}
+			}
+			.contentDescription {
+				width: 100%;
+				pre {
+					font-family: 'Open Sans';
+					line-height: vw(23px);
+					width: 100%;
+					white-space: pre-wrap !important;
+					overflow: hidden;
+					word-wrap: break-word;
+					color: black;
+					h1 {
+						font-size: vw(32px);
+					}
+					h2 {
+						font-size: vw(24px);
+					}
+					h3 {
+						font-size: vw(18.72px);
+					}
+					p {
+						font-size: vw(16px);
+					}
+					a {
+						color: #06c;
+						text-decoration: underline;
+					}
+					.ql-video {
+						width: 100%;
+						height: 18.837890625vw;
+						display: block;
+						margin: 0 auto !important;
+					}
+					li {
+						margin-left: vw(20px);
+					}
+				}
+			}
+		}
+	}
+	.recommendedPost {
+		position: fixed;
+		top: vw(90px);
+		left: 69.08125vw;
+		display: flex;
+		flex-direction: column;
+		width: 15.7812vw;
+		h4 {
+			@include textFormat('Open Sans', vw(16px), 600, #0D0D0D);
+		}
+		#post-lists {
+			margin-top: vw(8px);
+			display: flex;
+			flex-direction: column;
+			a {
+				@include textFormat('Open Sans', vw(15.5px), normal, #535353);
+				line-height: vw(20px);
+				word-break: break-all;
+				margin-bottom: vw(5px);
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			h6 {
+				@include textFormat('Open Sans', vw(16px), normal, #0d0d0d);
+			}
+		}
+	}
+}
+#pre-content-deco {
+	width: 100%;
+	border-top: vw(1px) solid #ccc;
+	margin: vw(15px) 0px vw(15px) 0px;
+}
+#content-deco {
+	width: 100%;
+	border-top: vw(1px) solid #ccc;
+	margin: vw(15px) 0px 0px 0px;
+}
+.postResponse {
+	margin: vw(50px) auto;
+	width: 34.88958333333vw;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	#editor {
+		width: 34.88958333333vw;
+		margin: 0 auto;
+	}
+	.ql-editor {
+		border: vw(1px) solid #ccc !important;
+		padding: vw(12px) vw(15px) !important;
+	}
+	.ql-toolbar.ql-snow {
+		padding: vw(7px) !important;
+		border: vw(1px) solid #ccc !important;
+		width: 34.88958333333vw;
+		margin: 0 auto;
+		max-height: vw(100px);
+		overflow: visible;
+	}
+	#submitResponse {
+		margin-top: vw(10px);
+		width: 6.6875vw;
+		height: vw(35px);
+		display: none;
+		flex-direction: row;
+		justify-content: center;
+		padding: vw(5px) 0.78125vw;
+		background-color: $primaryColor;
+		border: none;
+		outline: none;
+		border-radius: vw(4px);
+		svg {
+			width: vw(17px);
+			height: vw(17px);
+			margin-right: vw(10px);
+			fill: white;
+			margin-top: vw(3px);
+		}
+		h6 {
+			@include textFormat('Open Sans', vw(16px), 600, white);
+			line-height: vw(24px);
+		}
+		&:hover {
+			background-color: #9f4a27;
+			cursor: pointer;
+			transition: all 0.25s ease;
+		}
+	}
+}
+.image-uploading {
+	position: relative;
+	display: inline-block;
+}
+.image-uploading img {
+	max-width: 98% !important;
+	filter: blur(vw(5px));
+	opacity: 0.3;
+}
+.image-uploading::before {
+	content: "";
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: vw(30px);
+	height: vw(30px);
+	margin-top: vw(-15px);
+	margin-left: vw(-15px);
+	border-radius: 50%;
+	border: vw(3px) solid #ccc;
+	border-top-color: $primaryColor;
+	z-index: 1;
+	animation: spinner 0.6s linear infinite;
+}
+@keyframes spinner {
+	to {
+		transform: rotate(360deg);
+	}
+}
+.reply-option-container {
+	position: relative;
+	display: none;
+	z-index: 70;
+	animation: reveal 0.2s cubic-bezier(0.6, 0.2, 0.1, 1);
+	div {
+		position: absolute;
+		top: vw(22px);
+		left: vw(-85px);
+		width: 7.39583333vw;
+		padding: vw(20px) 0;
+		height: fit-content;
+		background-color: white;
+		box-shadow: 0px vw(2px) vw(4px) rgba(0, 0, 0, 0.25);
+		display: flex;
+		flex-direction: column;
+		justify-items: center;
+	}
+	a {
+		display: flex;
+		flex-direction: row;
+		margin: 0 vw(25px);
+	}
+	#edit-button {
+		margin-bottom: vw(35px);
+		svg {
+			fill: #0085ff;
+			margin-right: 1.054166666vw;
+		}
+		h6 {
+			@include textFormat('Open Sans', vw(17px), 600, #0085ff);
+		}
+		&:hover {
+			h6 {
+				color: #0a69c2;
+				transition: all 0.2s ease;
+			}
+			cursor: pointer;
+		}
+	}
+	#delete-button {
+		svg {
+			fill: #ff002e;
+			margin-right: 0.864166666vw;
+		}
+		h6 {
+			@include textFormat('Open Sans', vw(17px), 600, #ff002e);
+		}
+		&:hover {
+			h6 {
+				color: #b10e2c;
+				transition: all 0.2s ease;
+			}
+			cursor: pointer;
+		}
+	}
+}
+.ql-container.ql-snow {
+	border: none !important;
+	position: relative;
+	z-index: 1;
+}
+.ql-editor {
+	padding: 0px;
+}
+.ql-toolbar.ql-snow {
+	background-color: rgba(255, 255, 255, .2);
+	backdrop-filter: blur(vw(5px));
+	overflow: hidden;
+	width: 100% !important;
+	z-index: 2 !important;
+	position: relative;
+	max-height: 0px;
+	padding: 0px !important;
+	border: 0px !important;
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+	width: 100%;
+}
+.function-button {
+	display: none;
+	margin-left: auto;
+	width: fit-content;
+	margin-top: vw(10px);
+	a {
+		padding: vw(8px) vw(10px);
+	}
+	.cancel-function-button {
+		@include textFormat('Open Sans',vw(15px),normal,#828282 !important);
+		margin-right: 1vw;
+		&:hover {
+			color: black !important;
+			transition: color 0.3s ease;
+			cursor: pointer;
+		}
+	}
+	.save-function-button {
+		@include textFormat('Open Sans',vw(16px),normal,white !important);
+		border-radius: vw(3px);
+		background-color: $primaryColor;
+		width: 3.125vw;
+		text-align: center;
+		&:hover {
+			background-color: #b65127;
+			transition: all 0.3s ease;
+		}
+	}
+}
+.editUniversal {
+	margin-bottom: vw(35px) !important;
+	img {
+		width: vw(19px);
+		height: vw(19px);
+		margin-right: 1.054166666vw;
+	}
+	h6 {
+		@include textFormat('Open Sans', vw(17px), 600, #0085ff);
+	}
+	&:hover {
+		h6 {
+			color: #0a69c2;
+			transition: all 0.2s ease;
+		}
+		cursor: pointer;
+	}
+}
+.postDiff {
+	@include textFormat('Open Sans', vw(14px) !important, normal, #535353);
+	margin: vw(5px) 0 vw(32px) 0px !important;
+}
+.replyDiff {
+	@include textFormat('Open Sans', vw(14px)!important, normal, #535353 !important);
+	float: right;
+	margin: vw(8px) 0 vw(45px) 0 !important;
+}
+.ql-editor {
+	a {
+		color: #06c !important;
+	}
+	padding: 0px !important;
+}
+.ql-tooltip.ql-editing.ql-flip {
+	position: relative;
+	z-index: 10;
+	top: vw(-175px) !important;
+	width: fit-content;
+}
+// Confirm popout
+.container {
+	width: vw(300px);
+	margin: 0 auto;
+}
+.fa-edit {
+	color: green;
+}
+.popout-title {
+	@include textFormat('Open Sans', vw(18px), 600, rgb(17, 17, 17));
+}
+.popout-content {
+	@include textFormat('Open Sans', vw(15px),500, rgb(34, 34, 34));
+}
+.jconfirm-buttons {
+	button {
+		text-transform: capitalize !important;
+		outline: none;
+	}
+}
+.jconfirm-content {
+	overflow: visible !important;
+	height: fit-content;
+}

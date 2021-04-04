@@ -1,0 +1,182 @@
+@import './styles.scss';
+
+.page-content {
+	// background-color: rgba(255, 255, 255, 0.4) !important;
+	// backdrop-filter: blur(5px);
+}
+.content-windows {
+	display: flex !important;
+	flex-direction: column;
+	#admin-searchBar {
+		margin-top: vw(20px);
+		width: vw(400px);
+		height: vw(31px);
+		border-radius: vw(4px);
+		overflow: hidden;
+		// padding: vw(8px) 0px vw(8px) vw(20px);
+		box-shadow: 0px vw(2px) vw(4px) rgba(0, 0, 0, 0.2);
+		display: flex;
+		flex-direction: row;
+		.admin-searchBar-title {
+			height: vw(21px);
+			background-color: rgb(219, 219, 219);
+			padding: vw(5px) vw(10px);
+			h3 {
+				@include textFormat('Open Sans', vw(15px),600, rgb(41, 41, 41));
+				line-height: vw(21px);
+			}
+		}
+		input {
+			width: 95%;
+			height: 100%;
+			background-color: white;
+			border: 0px;
+			outline: none;
+			padding: 0px vw(10px);
+			@include textFormat('Open Sans',vw(16px), 400,rgb(32, 32, 32));
+		}
+	}
+}
+
+.tableContainer {
+	background-color: white;
+	padding: vw(5px);
+	border-radius: vw(4px);
+	border: vw(1px) solid #ddd;
+	max-height: vw(610px);
+	overflow-y: scroll;
+	box-shadow: 0px vw(2px) vw(4px) rgba(0, 0, 0, 0.3);
+	&::-webkit-scrollbar {
+		width: vw(14px);
+		height: vw(18px);
+	}
+	&::-webkit-scrollbar-thumb {
+		height: vw(6px);
+		border: vw(4px) solid rgba(0, 0, 0, 0);
+		background-clip: padding-box;
+		-webkit-border-radius: 7px;
+		background-color: rgba(0, 0, 0, 0.3);
+		-webkit-box-shadow: inset vw(-1px) vw(-1px) 0px rgba(0, 0, 0, 0.05),
+			inset vw(1px) vw(1px) 0px rgba(0, 0, 0, 0.05);
+	}
+	&::-webkit-scrollbar-button {
+		width: 0;
+		height: 0;
+		display: none;
+	}
+	&::-webkit-scrollbar-corner {
+		background-color: transparent;
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background-color: #646464;
+		transition: all 1s ease;
+		cursor: pointer;
+	}
+	.table {
+		font-family: "Open Sans";
+		width: 100%;
+		border-collapse: collapse;
+		th {
+			text-align: left;
+			font-size: vw(15px);
+			color: rgb(32, 32, 32);
+		}
+		thead {
+		}
+		tbody {
+			border-bottom: vw(2px) solid #dddddd;
+			border-top: vw(2px) solid #dddddd;
+			height: vw(400px);
+		}
+		td,
+		th {
+			padding: vw(9px);
+		}
+		td {
+			border-bottom: vw(1px) solid #dddddd;
+			@include textFormat('Open Sans', vw(14px), 500, rgb(66, 66, 66));
+		}
+	}
+}
+.actionButtons {
+	display: none;
+	flex-direction: row;
+}
+.actionButton {
+	width: fit-content;
+	display: flex;
+	flex-direction: row;
+	border: none;
+	outline: none;
+	padding: vw(5px) vw(10px);
+	background-color: white;
+	box-shadow: 0px vw(2px) vw(4px) rgba(0, 0, 0, 0.2);
+	svg {
+		width: vw(18px);
+		height: vw(18px);
+		fill: rgb(85, 85, 85);
+	}
+	h4 {
+		@include textFormat('Open Sans',vw(13px),600, black);
+		margin-left: vw(5px);
+		line-height: vw(18px);
+	}
+	&:hover {
+		cursor: pointer;
+		background-color: rgb(180, 180, 180);
+		transition: all 0.25s ease;
+	}
+}
+
+#buttons {
+	display: flex;
+	flex-direction: column;
+}
+
+.checkBoxSelect {
+	outline: none;
+	&:hover {
+		background-color: grey;
+		transition: all 0.25s ease;
+	}
+}
+
+//Confirm popout box
+.container {
+	width: vw(600px);
+	margin: 0 auto;
+}
+.fa-exclamation-triangle {
+	color: rgb(204, 52, 52);
+}
+.fa-check-circle {
+	color: green;
+}
+.popout-title {
+	@include textFormat('Open Sans', vw(18px), 600, rgb(17, 17, 17));
+}
+.popout-content {
+	@include textFormat('Open Sans', vw(15px),500, rgb(34, 34, 34));
+}
+#jconfirm-box33420 {
+	overflow: hidden;
+}
+.jconfirm-buttons {
+	button {
+		text-transform: capitalize !important;
+		outline: none;
+	}
+}
+.jconfirm-content {
+	overflow: visible !important;
+	height: vw(25px);
+}
+
+//Format user status data
+#activeStatus {
+	color: rgb(30, 165, 30);
+}
+#bannedStatus {
+	color: red;
+	font-weight: 600;
+}

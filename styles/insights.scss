@@ -1,0 +1,57 @@
+@import './styles.scss';
+
+.highcharts-background {
+	fill: rgba(255, 255, 255, 0.8) !important;
+}
+.highcharts-title {
+	@include textFormat("Open Sans", vw(17px) !important, 500, black);
+}
+text {
+	@include textFormat('Open Sans',vw(12px)!important, 600, black);
+}
+.highcharts-axis-title {
+	fill: black !important;
+}
+.content-windows {
+	display: flex !important;
+	flex-direction: row !important;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	overflow-y: scroll;
+	&::-webkit-scrollbar {
+		width: vw(8px);
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: rgb(240, 240, 240);
+		border-radius: 5px;
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background-color: #929292;
+		transition: all 1s ease;
+		cursor: pointer;
+	}
+	#postPerDayStats {
+		width: vw(550px);
+		height: vw(300px);
+	}
+	#categoryTrendStats {
+		width: vw(520px);
+		height: vw(300px);
+	}
+	#proportionUserStats {
+		width: vw(280px);
+		height: vw(300px);
+	}
+	#categoryPostStats {
+		width: vw(310px);
+		height: vw(300px);
+	}
+	#categoryViewStats {
+		width: vw(850px);
+		height: vw(300px);
+	}
+	div {
+		border-radius: vw(3px);
+		box-shadow: 0px vw(2px) vw(4px) rgba(0, 0, 0, 0.3);
+	}
+}

@@ -1,0 +1,87 @@
+@import './styles.scss';
+.listOfCategories {
+	display: flex;
+	flex-direction: column;
+	button {
+		padding: vw(5px) vw(8px);
+		width: fit-content;
+		display: flex;
+		flex-direction: row;
+		border: none;
+		outline: none;
+		border-radius: vw(4px);
+		margin-bottom: vw(5px);
+		transition: all 0.25s ease;
+		img {
+			width: vw(15px);
+			height: vw(15px);
+			margin-right: vw(7px);
+			margin-top: vw(2px);
+		}
+		h6 {
+			@include textFormat('Open Sans', vw(15px),600, black);
+			line-height: vw(17px);
+		}
+		&:hover {
+			cursor: pointer;
+			background-color: rgb(212, 212, 212);
+		}
+	}
+	.chosenCategory {
+		background-color: rgb(44, 170, 243);
+		transition: all 0.25s ease;
+		h6 {
+			color: white !important;
+		}
+		&:hover {
+			background-color: rgb(33, 117, 165);
+		}
+	}
+	#noResult {
+		display: none;
+		@include textFormat('Open Sans', vw(15px), 600, rgb(32, 32, 32));
+	}
+}
+.search-category {
+	width: vw(150px);
+	height: vw(22px);
+	border-bottom: vw(1px) solid black;
+	padding: vw(4px) 0px;
+	margin-top: vw(10px);
+	margin-bottom: vw(10px);
+	input {
+		width: 95%;
+		height: 100%;
+		background-color: transparent;
+		border: 0px;
+		outline: none;
+		padding-right: 5%;
+		@include textFormat('Open Sans',vw(15px), 400,black);
+		&::placeholder {
+			@include textFormat('Open Sans',vw(14px), 400,black);
+		}
+		&:focus {
+			&::placeholder {
+				color: transparent;
+				transform: translateY(-10px) translateX(-21px) scale(0.8);
+				transition: all 0.15s ease-in-out;
+			}
+		}
+	}
+	&::after {
+		content: "Search:";
+		@include textFormat('Open Sans',vw(14px), 300,transparent);
+		position: absolute;
+		top: 20px;
+		left: 7px;
+	}
+	&:focus-within {
+		border-bottom: 1px solid black !important;
+		&::after {
+			color: black;
+			top: vw(0px);
+			left: 0px;
+			transition: all 0.3s ease-in-out;
+		}
+	}
+}
