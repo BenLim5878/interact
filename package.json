@@ -10,8 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.5.1",
-    "jsdom": "^16.4.0",
+    "jquery": "^3.6.0",
+    "jsdom": "^16.7.0",
     "quill-image-uploader": "^1.2.2"
   }
 }
