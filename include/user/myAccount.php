@@ -19,7 +19,7 @@
 <body>
     <header>
         <?php
-        include '../header2.php'
+        include '/../header2.php'
         ?>
     </header>
     <main>
@@ -72,7 +72,7 @@
                 <div id="profile-img"></div>
                 <div class="user-profile-basic-info">
                     <?php
-                    include '../dbh.inc.php';
+                    include '/../dbh.inc.php';
                     $userEmail = '';
                     $userRole = '';
                     $userFirstName = '';
@@ -245,7 +245,7 @@
                     </div>
                 </div>
                 <div class="content">
-                    <?php include "../retrivePostListByUser.php" ?>
+                    <?php include "/../retrivePostListByUser.php" ?>
                 </div>
                 <div class="edit-account-window">
                     <a id='back'>

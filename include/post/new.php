@@ -22,7 +22,7 @@
 <body onload="setContent()">
     <header>
         <?php
-        include '../header2.php'
+        include '/../header2.php'
         ?>
     </header>
     <main>

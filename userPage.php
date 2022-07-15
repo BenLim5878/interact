@@ -57,7 +57,7 @@
         function retrievePostList(postCount) {
             $.ajax({
                 type: "GET",
-                url: './include/retrivePostList.php',
+                url: 'include/retrivePostList.php',
                 data: {
                     postCount: postCount
                 },

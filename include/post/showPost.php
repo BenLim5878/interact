@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
     <title>
         <?php
-        include '../dbh.inc.php';
+        include '/../dbh.inc.php';
         $id = htmlspecialchars($_GET["id"]);
 
         $query = "SELECT * FROM post WHERE ref_ID ='$id'";
@@ -30,14 +30,14 @@
     <header>
         <?php
         $id = htmlspecialchars($_GET["id"]);
-        include '../dbh.inc.php';
+        include '/../dbh.inc.php';
         $query = "SELECT * FROM post WHERE ref_ID ='$id'";
         $result = mysqli_query($conn, $query);
         if (mysqli_num_rows($result) == 0) {
             header("Location: /userPage.php");
             exit();
         }
-        include '../header2.php'
+        include '/../header2.php'
         ?>
     </header>
 
@@ -177,7 +177,7 @@
                     }
                 }
                 date_default_timezone_set('Asia/Hong_Kong');
-                include '../dbh.inc.php';
+                include '/../dbh.inc.php';
                 $id = htmlspecialchars($_GET["id"]);
                 $query = "SELECT * FROM post WHERE ref_ID ='$id'";
                 $query3 = "SELECT * FROM (SELECT postreply.reply_id,postreply.post_id,content,dateReplied FROM postreply LEFT JOIN reply ON postreply.reply_id=reply.reply_id) AS test WHERE post_id = (SELECT post_id FROM post WHERE ref_ID='$id')";
@@ -510,7 +510,7 @@
                     $index = 0;
                     $category = [];
                     $id = htmlspecialchars($_GET["id"]);
-                    include_once '../dbh.inc.php';
+                    include_once '/../dbh.inc.php';
                     $retrievePostID = "SELECT * FROM post WHERE ref_ID='$id'";
                     $result = mysqli_query($conn, $retrievePostID);
                     echo $conn->error;

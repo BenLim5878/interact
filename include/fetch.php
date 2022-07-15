@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'dbh.inc.php';
+include './dbh.inc.php';
 $query = "SELECT * FROM notification WHERE usersId = '$_SESSION[userid]' ORDER BY date DESC LIMIT 10";
 $result = mysqli_query($conn, $query);
 $output = '';
