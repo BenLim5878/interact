@@ -1,6 +1,6 @@
 <?php
 
-$url = parse_url(getenv("mysql://bfa094c41daca2:13639c91@us-cdbr-east-06.cleardb.net/heroku_c3d91442ca8b559?reconnect=true"));
+$url = parse_url(getenv("mysql://b8085750c4cb45:741318c2@us-cdbr-east-06.cleardb.net/heroku_eed5da92befa448?reconnect=true"));
 
 $cleardb_url = parse_url(getenv($url));
 $cleardb_server = $cleardb_url["host"];
