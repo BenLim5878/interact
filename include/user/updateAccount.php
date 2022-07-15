@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once '/../dbh.inc.php';
+include_once './../dbh.inc.php';
 $userID = $_SESSION["userid"];
 if (isset($_POST['email'])) {
     $firstName = $_POST['firstName'];

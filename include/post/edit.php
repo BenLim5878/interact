@@ -24,11 +24,11 @@
 <body onload="setContent(),checkCategoryCount()">
     <header>
         <?php
-        include '/../header2.php'
+        include './../header2.php'
         ?>
     </header>
     <?php
-    include '/../dbh.inc.php';
+    include './../dbh.inc.php';
     $id = htmlspecialchars($_GET["id"]);
     $ownerID = '';
     $result = mysqli_query($conn, "SELECT * FROM post WHERE ref_ID ='$id'");
@@ -57,7 +57,7 @@
                 <div class="input-window">
                     <div class="input-field">
                         <input type="text" placeholder="Title" id="post-title" onkeyup="enableSubmit()" maxlength="65" value="<?php
-                                                                                                                                include '/../dbh.inc.php';
+                                                                                                                                include './../dbh.inc.php';
                                                                                                                                 $query =  "SELECT * FROM post WHERE ref_ID ='$id'";
                                                                                                                                 $result = mysqli_query($conn, $query);
                                                                                                                                 while ($row = $result->fetch_assoc()) {
@@ -122,7 +122,7 @@
                         </div>
                         <div id="tags-list">
                             <?php
-                            include '/../dbh.inc.php';
+                            include './../dbh.inc.php';
                             $categoryCount = 0;
                             $id = htmlspecialchars($_GET["id"]);
                             $query =  "SELECT * FROM post WHERE ref_ID ='$id'";
@@ -190,7 +190,7 @@
                                 </div>
                                 <div id="type-tag">
                                     <?php
-                                    include '/../dbh.inc.php';
+                                    include './../dbh.inc.php';
                                     $typeCount = 0;
                                     $id = htmlspecialchars($_GET["id"]);
                                     $query =  "SELECT * FROM post WHERE ref_ID ='$id'";
@@ -241,7 +241,7 @@
         </div>
     </main>
     <?php
-    include '/../dbh.inc.php';
+    include './../dbh.inc.php';
     $query =  "SELECT * FROM post WHERE ref_ID ='$id'";
     $result = mysqli_query($conn, $query);
     while ($row = $result->fetch_assoc()) {
