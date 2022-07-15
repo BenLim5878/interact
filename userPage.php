@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="styles/header2.css">
     <link rel="shortcut icon" type="image/png" href="materials/logo/logo-transparent.png">
     <link rel="stylesheet" href="/styles/quill.css">
-    <noscript>
 </head>
 
 <body>
