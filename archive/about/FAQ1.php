@@ -15,7 +15,7 @@
 
 <body onload="textArea()">
     <div class="wrapper">
-        <?php include '../../include/header.php>'; ?>
+        <?php include '/../../include/header.php>'; ?>
         <!-- Path links -->
         <div id="pathway-links">
             <a href="/help.php" id="help-back">Help</a>
@@ -50,7 +50,7 @@
                             $months = floor(($diff - $years * 365 * 60 * 60 * 24) / (30 * 60 * 60 * 24));
                             $days = floor(($diff - $years * 365 * 60 * 60 * 24 - $months * 30 * 60 * 60 * 24) / (60 * 60 * 24));;
                             // Include
-                            include '../../include/dbRetriveAbout.php';
+                            include '/../../include/dbRetriveAbout.php';
                             ?>
                         </h4>
                     </div>
@@ -63,7 +63,7 @@ $category = "FAQ";
 $ID = "34";
 $data = 'content';
 // Include
-include '../../include/dbRetriveAbout.php';
+include '/../../include/dbRetriveAbout.php';
 ?>
                         </textarea>
                         <!-- End of textarea -->
@@ -73,7 +73,7 @@ include '../../include/dbRetriveAbout.php';
         </div>
     </div>
     <footer>
-        <?php include '../../include/footer.php'; ?>
+        <?php include '/../../include/footer.php'; ?>
     </footer>
     <script>
         function textArea() {
