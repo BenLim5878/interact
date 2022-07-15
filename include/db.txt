@@ -1,1 +1,0 @@
-mysql --host=us-cdbr-east-03.cleardb.com --user=b59a876e2981e8 --password=959d7daf --reconnect apuinteract interact.sql
