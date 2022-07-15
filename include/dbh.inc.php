@@ -9,4 +9,6 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+
+echo "fasdf";
 ?>
