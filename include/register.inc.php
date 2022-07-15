@@ -9,8 +9,10 @@ if (isset($_POST["submit"])) {
   $pwdRepeat = $_POST["pwdrepeat"];
 
 
-  // require_once 'dbh.inc.php';
-  // require_once 'functions.inc.php';
+  require_once 'dbh.inc.php';
+  require_once 'functions.inc.php';
+
+
   // /*error handler*/
 
   // if (emptyInputRegister($Fname, $Lname, $email, $pwd, $pwdRepeat) !== false) {
@@ -38,7 +40,7 @@ if (isset($_POST["submit"])) {
   //   exit();
   // }
 
-  // createUser($conn, $Fname, $Lname, $email, $pwd);
+  createUser($conn, $Fname, $Lname, $email, $pwd);
   echo("fasd");
 } else {
   // header("location: ../register.php");
