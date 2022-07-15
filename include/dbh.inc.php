@@ -11,11 +11,11 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 // Connect to DB
-$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+// $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
-if (!$conn){
-  echo mysqli_connect_errno().PHP_EOL;
-  exit();
-}
+// if (!$conn){
+//   echo mysqli_connect_errno().PHP_EOL;
+//   exit();
+// }
 
 ?>
