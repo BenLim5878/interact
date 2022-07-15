@@ -607,7 +607,7 @@ html {
 }
 
 .logo-image {
-  background-image: url("/interact/materials/logo/logo-transparent.png");
+  background-image: url("/materials/logo/logo-transparent.png");
   margin: 1.09375vw 0px 0.46875vw 0px;
   width: 2.34375vw;
   height: 2.34375vw;

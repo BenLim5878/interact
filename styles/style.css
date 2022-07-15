@@ -296,7 +296,7 @@ h2 {
 
 .image {
   float: right;
-  background-image: url("/interact/materials/Isometric Teamwork Vol 4 Vector_Isometric-Teamwork-Vol-4-Vector.jpg");
+  background-image: url("/materials/Isometric Teamwork Vol 4 Vector_Isometric-Teamwork-Vol-4-Vector.jpg");
   width: 34.58333vw;
   height: 35.9375vw;
   background-position: center;
@@ -455,7 +455,7 @@ h2 {
 }
 
 #login-background {
-  background-image: url("/interact/materials/login-background.jpg");
+  background-image: url("/materials/login-background.jpg");
   width: 67%;
   height: 100vh;
   background-position: center;
@@ -487,7 +487,7 @@ h2 {
 }
 
 #logo-loginregister {
-  background-image: url("/interact/materials/logo/logo-transparent.png");
+  background-image: url("/materials/logo/logo-transparent.png");
   width: 3.4375vw;
   height: 3.4375vw;
   background-position: center;
@@ -724,7 +724,7 @@ h2 {
 
 /* Register Page */
 #register-background {
-  background-image: url("/interact/materials/register-background.png");
+  background-image: url("/materials/register-background.png");
   width: 78.5416%;
   height: 100vh;
   background-position: center;
