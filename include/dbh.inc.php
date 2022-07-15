@@ -14,5 +14,5 @@ $cleardb_url = getenv("mysql://b8085750c4cb45:741318c2@us-cdbr-east-06.cleardb.n
 //   echo mysqli_connect_errno().PHP_EOL;
 //   exit();
 // }
-
+echo "fasdf";
 ?>
