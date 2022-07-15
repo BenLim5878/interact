@@ -15,7 +15,7 @@
 
 <body onload="textArea()">
     <div class="wrapper">
-        <?php include "include/header.php"; ?>
+        <?php include_once "include/header.php"; ?>
         <!-- Path links -->
         <div id="pathway-links">
             <a href="/help.php" id="help-back">Help</a>
