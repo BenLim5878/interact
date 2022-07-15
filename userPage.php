@@ -18,7 +18,7 @@
 <body>
     <header>
         <?php
-        include '/include/header2.php'
+        include './include/header2.php'
         ?>
     </header>
     <main>
@@ -32,7 +32,7 @@
                 <div id="richTextBox">
                     <div id="editor"></div>
                     <div id="bottomBar">
-                        <a href="/include/post/new.php" onclick="createCookie(),deleteCookie()">
+                        <a href="./include/post/new.php" onclick="createCookie(),deleteCookie()">
                             <svg fill=white xmlns="http://www.w3.org/2000/svg" id="bold" enable-background="new 0 0 24 24" height="0.9375vw" viewBox="0 0 24 24" width="0.9375vw">
                                 <path d="m24 17.5v.75c0 .2-.08.39-.22.53l-5 5c-.14.14-.33.22-.53.22h-.75v-5.75c0-.41.34-.75.75-.75z" />
                                 <path d="m21.25 5h-7.5v2.25c0 .965-.785 1.75-1.75 1.75s-1.75-.785-1.75-1.75v-2.25h-7.5c-1.52 0-2.75 1.23-2.75 2.75v13.5c0 1.52 1.23 2.75 2.75 2.75h13.75v-5.75c0-.965.785-1.75 1.75-1.75h5.75v-8.75c0-1.52-1.23-2.75-2.75-2.75zm-7.25 14.5h-9.25c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h9.25c.414 0 .75.336.75.75s-.336.75-.75.75zm5.25-4h-14.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h14.5c.414 0 .75.336.75.75s-.336.75-.75.75zm0-4h-14.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h14.5c.414 0 .75.336.75.75s-.336.75-.75.75z" />
@@ -45,7 +45,7 @@
                 </div>
                 <div id="homepage-deco"></div>
             </div>
-            <?php include '/include/side-content.php'; ?>
+            <?php include './include/side-content.php'; ?>
         </div>
     </main>
     <!-- Retrieve post list AJAX -->
@@ -56,7 +56,7 @@
         function retrievePostList(postCount) {
             $.ajax({
                 type: "GET",
-                url: '/include/retrivePostList.php',
+                url: './include/retrivePostList.php',
                 data: {
                     postCount: postCount
                 },
