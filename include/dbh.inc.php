@@ -3,12 +3,12 @@
 $url = parse_url(getenv("mysql://b8085750c4cb45:741318c2@us-cdbr-east-06.cleardb.net/heroku_eed5da92befa448?reconnect=true"));
 
 $cleardb_url = parse_url(getenv($url));
-$cleardb_server = $cleardb_url["host"];
-$cleardb_username = $cleardb_url["user"];
-$cleardb_password = $cleardb_url["pass"];
-$cleardb_db = substr($cleardb_url["path"],1);
-$active_group = 'default';
-$query_builder = TRUE;
+// $cleardb_server = $cleardb_url["host"];
+// $cleardb_username = $cleardb_url["user"];
+// $cleardb_password = $cleardb_url["pass"];
+// $cleardb_db = substr($cleardb_url["path"],1);
+// $active_group = 'default';
+// $query_builder = TRUE;
 
 // Connect to DB
 // $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
