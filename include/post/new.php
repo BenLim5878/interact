@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="shortcut icon" type="image/png" href="/interact/materials/logo/logo-transparent.png">
+    <link rel="shortcut icon" type="image/png" href="/materials/logo/logo-transparent.png">
     <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/interact/styles/header2.css">
-    <link rel="stylesheet" href="/interact/styles/quill.css">
-    <link rel="stylesheet" href="/interact/styles/newPost.css">
+    <link rel="stylesheet" href="/styles/header2.css">
+    <link rel="stylesheet" href="/styles/quill.css">
+    <link rel="stylesheet" href="/styles/newPost.css">
     <title>Create post</title>
     <?php
     if (isset($_COOKIE['newPost'])) {
-        header("Location: /interact/userPage.php");
+        header("Location: /userPage.php");
         setcookie("newPost", "", time() - 3600, "/");
     }
     ?>
@@ -27,7 +27,7 @@
     </header>
     <main>
         <div class="newPost-window">
-            <a id="back" href="/interact/userPage.php">
+            <a id="back" href="/userPage.php">
                 <div>
                     <svg id="back-help" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 15" fill="white" style="transform: rotate(-90deg);">
                         <path d="M12 0L0 12L2.83 14.83L12 5.66L21.17 14.83L24 12L12 0Z" fill="#535353" />
@@ -292,7 +292,7 @@
             if (count <= 3) {
                 element.remove();
                 const closeButton = document.createElement("img");
-                closeButton.src = '/interact/materials/close.png';
+                closeButton.src = '/materials/close.png';
                 closeButton.style.width = "0.67708333vw";
                 closeButton.style.height = "0.67708333vw";
                 closeButton.style.margin = "0.26041667vw 0.52083333vw 0px 0.52083333vw"
@@ -328,7 +328,7 @@
             if (count2 < 1) {
                 element.remove();
                 const closeButton = document.createElement("img");
-                closeButton.src = '/interact/materials/close.png';
+                closeButton.src = '/materials/close.png';
                 closeButton.style.width = "0.67708333vw";
                 closeButton.style.height = "0.67708333vw";
                 closeButton.style.margin = "0.26041667vw 0.52083333vw 0px 0.52083333vw"
@@ -443,7 +443,7 @@
     <script>
         $(document).ready(function() {
             $('#externalLink').click(function() {
-                window.open('/interact/help.php')
+                window.open('/help.php')
             })
         });
     </script>

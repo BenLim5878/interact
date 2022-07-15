@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles/userPage.css">
     <link rel="stylesheet" href="styles/header2.css">
     <link rel="shortcut icon" type="image/png" href="materials/logo/logo-transparent.png">
-    <link rel="stylesheet" href="/interact/styles/quill.css">
+    <link rel="stylesheet" href="/styles/quill.css">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
     <main>
         <div id="background-color"></div>
         <div id="background">
-            <a id="back" href="/interact/category-list.php">
+            <a id="back" href="/category-list.php">
                 <div>
                     <svg id="back-help" xmlns="http://www.w3.org/2000/svg" width="16px" height="14px" viewBox="0 0 24 15" fill="#EF6C35" style="transform: rotate(-90deg);">
                         <path d="M12 0L0 12L2.83 14.83L12 5.66L21.17 14.83L24 12L12 0Z" fill="#535353" />
@@ -54,7 +54,7 @@
         function retrievePostList(postCount) {
             $.ajax({
                 type: "GET",
-                url: '/interact/include/retrivePostListByCategory.php',
+                url: '/include/retrivePostListByCategory.php',
                 data: {
                     category: categoryName,
                     postCount: postCount

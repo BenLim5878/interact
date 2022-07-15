@@ -9,7 +9,7 @@
             echo $conn->error;
             while ($row = $result->fetch_assoc()) {
                 $categoryName = $row['category_name'];
-                echo "<a href='/interact/post-category.php?category=$categoryName' id='categoryBox'>";
+                echo "<a href='/post-category.php?category=$categoryName' id='categoryBox'>";
                 echo "<h3> $row[category_name]</h3>";
                 $count = "$row[number]";
                 if ($count >= 1) {
@@ -37,7 +37,7 @@
             $result = mysqli_query($conn, $topPosts);
             echo $conn->error;
             while ($row = $result->fetch_assoc()) {
-                echo "<a href='/interact/include/post/showPost.php?id=$row[ref_ID]&origin=$categoryName' id='postBox'>";
+                echo "<a href='/include/post/showPost.php?id=$row[ref_ID]&origin=$categoryName' id='postBox'>";
                 echo "<h2> $row[title] </h2>";
                 $views = "$row[views]";
                 if ($views >= 1) {

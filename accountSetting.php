@@ -43,8 +43,8 @@
                     </div>
                 </button>
                 <div id="faq-expand">
-                    <a href="/interact/archive/account/FAQ1.php">How to update/edit my profile?</a>
-                    <a href="/interact/archive/account/FAQ2.php">How to delete my account?</a>
+                    <a href="/archive/account/FAQ1.php">How to update/edit my profile?</a>
+                    <a href="/archive/account/FAQ2.php">How to delete my account?</a>
                 </div>
             </div>
         </div>

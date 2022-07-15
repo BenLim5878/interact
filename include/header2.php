@@ -3,10 +3,10 @@
 <?php
 session_start();
 if (!isset($_SESSION['status'])) {
-    header("Location: /interact/index.php");
+    header("Location: /index.php");
 }
 if ($_SESSION['role'] == 'admin') {
-    header("Location: /interact/adminPage.php");
+    header("Location: /adminPage.php");
 }
 $userID = $_SESSION['userid'];
 echo "<script>var sessionUserID = $userID</script>";
@@ -33,14 +33,14 @@ echo "<script>var sessionUserID = $userID</script>";
         <div id="homepage-menu">
             <div class="links">
                 <!-- Home -->
-                <a id="home-btn" href="/interact/userPage.php">
+                <a id="home-btn" href="/userPage.php">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path d="m498.195312 222.695312c-.011718-.011718-.023437-.023437-.035156-.035156l-208.855468-208.847656c-8.902344-8.90625-20.738282-13.8125-33.328126-13.8125-12.589843 0-24.425781 4.902344-33.332031 13.808594l-208.746093 208.742187c-.070313.070313-.140626.144531-.210938.214844-18.28125 18.386719-18.25 48.21875.089844 66.558594 8.378906 8.382812 19.445312 13.238281 31.277344 13.746093.480468.046876.964843.070313 1.453124.070313h8.324219v153.699219c0 30.414062 24.746094 55.160156 55.167969 55.160156h81.710938c8.28125 0 15-6.714844 15-15v-120.5c0-13.878906 11.289062-25.167969 25.167968-25.167969h48.195313c13.878906 0 25.167969 11.289063 25.167969 25.167969v120.5c0 8.285156 6.714843 15 15 15h81.710937c30.421875 0 55.167969-24.746094 55.167969-55.160156v-153.699219h7.71875c12.585937 0 24.421875-4.902344 33.332031-13.808594 18.359375-18.371093 18.367187-48.253906.023437-66.636719zm0 0" />
                     </svg>
                     <h3>Home</h3>
                 </a>
                 <!-- Category -->
-                <a id="category-btn" href="/interact/category-list.php">
+                <a id="category-btn" href="/category-list.php">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24.334 24.334" style="enable-background:new 0 0 24.334 24.334;" xml:space="preserve">
                         <g>
                             <g>
@@ -84,7 +84,7 @@ echo "<script>var sessionUserID = $userID</script>";
                     </svg>
                     <h3>Category</h3>
                 </a>
-                <a id="request-btn" href="/interact/request.php">
+                <a id="request-btn" href="/request.php">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path d="m448.800781 0h-192.800781c-34.90625 0-63.199219 28.242188-63.199219 63.199219v289.199219c0 12.269531 14.070313 19.445312 24 12l60.265625-45.199219h171.734375c34.90625 0 63.199219-28.242188 63.199219-63.199219v-192.800781c0-34.90625-28.242188-63.199219-63.199219-63.199219zm-111.402343 238.867188h-65.332032c-8.285156 0-15-6.714844-15-15 0-8.285157 6.714844-15 15-15h65.332032c8.285156 0 15 6.714843 15 15 0 8.285156-6.714844 15-15 15zm95.335937-64.265626h-160.667969c-8.285156 0-15-6.71875-15-15 0-8.285156 6.714844-15 15-15h160.667969c8.28125 0 15 6.714844 15 15 0 8.28125-6.714844 15-15 15zm0-64.269531h-160.667969c-8.285156 0-15-6.714843-15-15 0-8.28125 6.714844-15 15-15h160.667969c8.28125 0 15 6.71875 15 15 0 8.285157-6.714844 15-15 15zm0 0" />
                         <path d="m166.238281 311.898438c0 39.160156-31.746093 70.90625-70.90625 70.90625-39.160156 0-70.90625-31.746094-70.90625-70.90625 0-39.164063 31.746094-70.910157 70.90625-70.910157 39.160157 0 70.90625 31.746094 70.90625 70.910157zm0 0" />
@@ -171,7 +171,7 @@ echo "<script>var sessionUserID = $userID</script>";
             <div id="homepage-menu">
                 <div class="links">
                     <!-- My Account -->
-                    <a id="account-btn" href="/interact/include/user/myAccount.php">
+                    <a id="account-btn" href="/include/user/myAccount.php">
                         <svg xmlns="http://www.w3.org/2000/svg" id="Solid" viewBox="0 0 512 512">
                             <path d="m431.964 435.333c-.921-58.994-19.3-112.636-51.977-151.474-32.487-38.601-76.515-59.859-123.987-59.859s-91.5 21.258-123.987 59.859c-32.646 38.797-51.013 92.364-51.973 151.285 18.46 9.247 94.85 44.856 175.96 44.856 87.708 0 158.845-35.4 175.964-44.667z" />
                             <circle cx="256" cy="120" r="88" />
@@ -181,7 +181,7 @@ echo "<script>var sessionUserID = $userID</script>";
                     <!-- Logout -->
                     <?php
                     if (isset($_SESSION["userid"])) {
-                        echo "<a id='logout-btn' href='/interact/include/logout.inc.php' onclick='deleteCookie()'>
+                        echo "<a id='logout-btn' href='/include/logout.inc.php' onclick='deleteCookie()'>
                         <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512.00533 512'>
                             <path d='m320 277.335938c-11.796875 0-21.332031 9.558593-21.332031 21.332031v85.335937c0 11.753906-9.558594 21.332032-21.335938 21.332032h-64v-320c0-18.21875-11.605469-34.496094-29.054687-40.554688l-6.316406-2.113281h99.371093c11.777344 0 21.335938 9.578125 21.335938 21.335937v64c0 11.773438 9.535156 21.332032 21.332031 21.332032s21.332031-9.558594 21.332031-21.332032v-64c0-35.285156-28.714843-63.99999975-64-63.99999975h-229.332031c-.8125 0-1.492188.36328175-2.28125.46874975-1.027344-.085937-2.007812-.46874975-3.050781-.46874975-23.53125 0-42.667969 19.13281275-42.667969 42.66406275v384c0 18.21875 11.605469 34.496093 29.054688 40.554687l128.386718 42.796875c4.351563 1.34375 8.679688 1.984375 13.226563 1.984375 23.53125 0 42.664062-19.136718 42.664062-42.667968v-21.332032h64c35.285157 0 64-28.714844 64-64v-85.335937c0-11.773438-9.535156-21.332031-21.332031-21.332031zm0 0' />
                             <path d='m505.75 198.253906-85.335938-85.332031c-6.097656-6.101563-15.273437-7.9375-23.25-4.632813-7.957031 3.308594-13.164062 11.09375-13.164062 19.714844v64h-85.332031c-11.777344 0-21.335938 9.554688-21.335938 21.332032 0 11.777343 9.558594 21.332031 21.335938 21.332031h85.332031v64c0 8.621093 5.207031 16.40625 13.164062 19.714843 7.976563 3.304688 17.152344 1.46875 23.25-4.628906l85.335938-85.335937c8.339844-8.339844 8.339844-21.824219 0-30.164063zm0 0' />
@@ -269,7 +269,7 @@ echo "<script>var sessionUserID = $userID</script>";
             if (query != '') {
                 $.ajax({
                     type: "POST",
-                    url: "/interact/include/searchPost.php",
+                    url: "/include/searchPost.php",
                     data: {
                         query: query
                     },
@@ -308,7 +308,7 @@ echo "<script>var sessionUserID = $userID</script>";
         // load new notifications
         function load_unseen_notification() {
             $.ajax({
-                url: "/interact/include/fetch.php",
+                url: "/include/fetch.php",
                 method: "GET",
                 dataType: "json",
                 success: function(data) {
@@ -324,7 +324,7 @@ echo "<script>var sessionUserID = $userID</script>";
         $(document).on('click', '#bellNotification-icon', function() {
             $.ajax({
                 type: "GET",
-                url: "/interact/include/updateNotification.php",
+                url: "/include/updateNotification.php",
                 success: function(response) {
                     $('.count').css('display', 'none');
                 }
@@ -337,7 +337,7 @@ echo "<script>var sessionUserID = $userID</script>";
     $(document).ready(function() {
         $('#helpCenter-btn').click(function(e) {
             e.preventDefault();
-            window.open('/interact/help.php')
+            window.open('/help.php')
         });
     });
 </script>

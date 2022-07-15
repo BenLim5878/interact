@@ -34,7 +34,7 @@ function retrieveID($conn, $refid)
             return $post_id;
             break;
         } else {
-            header("location: /interact/userPage.php");
+            header("location: /userPage.php");
             exit();
         }
     }
@@ -71,6 +71,6 @@ $cookie_name = "deletedPost";
 $cookie_value = "yes";
 setcookie($cookie_name, $cookie_value, time() + (1000 * 30), "/");
 
-header("location: /interact/userPage.php");
+header("location: /userPage.php");
 exit();
 $conn->close();

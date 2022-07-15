@@ -43,8 +43,8 @@
                     </div>
                 </button>
                 <div id="about-expand">
-                    <a href="/interact/archive/about/aboutUs1.php">What is Interact?</a>
-                    <a href="/interact/archive/about/aboutUs2.php">Our Team</a>
+                    <a href="/archive/about/aboutUs1.php">What is Interact?</a>
+                    <a href="/archive/about/aboutUs2.php">Our Team</a>
                 </div>
                 <!-- How it works -->
                 <button id="howWorks">
@@ -56,9 +56,9 @@
                     </div>
                 </button>
                 <div id="howWorks-expand">
-                    <a href="/interact/archive/about/howItWorks1.php">Getting started with Interact</a>
-                    <a href="/interact/archive/about/howItWorks2.php">Access to APSpace</a>
-                    <a href="/interact/archive/about/howItWorks3.php">What can I do with Interact?</a>
+                    <a href="/archive/about/howItWorks1.php">Getting started with Interact</a>
+                    <a href="/archive/about/howItWorks2.php">Access to APSpace</a>
+                    <a href="/archive/about/howItWorks3.php">What can I do with Interact?</a>
                 </div>
                 <!-- Threads & Posts -->
                 <button id="threadsPosts">
@@ -70,10 +70,10 @@
                     </div>
                 </button>
                 <div id="threadsPosts-expand">
-                    <a href="/interact/archive/about/threadsPosts1.php">Why aren't my posts showing up?</a>
-                    <a href="/interact/archive/about/threadsPosts2.php">How do I submit a picture/photo/comic to Interact?</a>
-                    <a href="/interact/archive/about/threadsPosts3.php">How to create poll?</a>
-                    <a href="/interact/archive/about/threadsPosts4.php">What is spam?</a>
+                    <a href="/archive/about/threadsPosts1.php">Why aren't my posts showing up?</a>
+                    <a href="/archive/about/threadsPosts2.php">How do I submit a picture/photo/comic to Interact?</a>
+                    <a href="/archive/about/threadsPosts3.php">How to create poll?</a>
+                    <a href="/archive/about/threadsPosts4.php">What is spam?</a>
                 </div>
                 <!-- How safe is Interact -->
                 <button id="safeInteract">
@@ -85,10 +85,10 @@
                     </div>
                 </button>
                 <div id="safeInteract-expand">
-                    <a href="/interact/archive/about/safeInteract1.php">Is Interact safe?</a>
-                    <a href="/interact/archive/about/safeInteract2.php">What’s your privacy policy?</a>
-                    <a href="/interact/archive/about/safeInteract3.php">How do i make complaint?</a>
-                    <a href="/interact/archive/about/safeInteract4.php">I may be the victim of a fraud or scam</a>
+                    <a href="/archive/about/safeInteract1.php">Is Interact safe?</a>
+                    <a href="/archive/about/safeInteract2.php">What’s your privacy policy?</a>
+                    <a href="/archive/about/safeInteract3.php">How do i make complaint?</a>
+                    <a href="/archive/about/safeInteract4.php">I may be the victim of a fraud or scam</a>
                 </div>
                 <!-- Frequently Asked Questions (FAQ) -->
                 <button id="faq">
@@ -100,7 +100,7 @@
                     </div>
                 </button>
                 <div id="faq-expand">
-                    <a href="/interact/archive/about/FAQ1.php">How can I submit a feedback or report a bug?</a>
+                    <a href="/archive/about/FAQ1.php">How can I submit a feedback or report a bug?</a>
                 </div>
             </div>
         </div>

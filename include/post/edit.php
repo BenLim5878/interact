@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="shortcut icon" type="image/png" href="/interact/materials/logo/logo-transparent.png">
+    <link rel="shortcut icon" type="image/png" href="/materials/logo/logo-transparent.png">
     <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/interact/styles/header2.css">
-    <link rel="stylesheet" href="/interact/styles/quill.css">
-    <link rel="stylesheet" href="/interact/styles/newPost.css">
+    <link rel="stylesheet" href="/styles/header2.css">
+    <link rel="stylesheet" href="/styles/quill.css">
+    <link rel="stylesheet" href="/styles/newPost.css">
     <title>Edit post</title>
     <?php
     ob_start();
     if (isset($_COOKIE['newEditPost'])) {
-        header("Location: /interact/userPage.php");
+        header("Location: /userPage.php");
         exit();
         setcookie("newEditPost", "", time() - 3600, "/");
     }
@@ -36,7 +36,7 @@
         $ownerID = $row['usersId'];
     }
     if ($ownerID != $_SESSION['userid']) {
-        header("Location: /interact/include/post/showPost.php?id=$id");
+        header("Location: /include/post/showPost.php?id=$id");
         exit();
     }
     ?>
@@ -44,7 +44,7 @@
         <div class="newPost-window">
             <?php
             $id = htmlspecialchars($_GET["id"]);
-            echo "<a id='back' href='/interact/include/post/showPost.php?id=$id'>"
+            echo "<a id='back' href='/include/post/showPost.php?id=$id'>"
             ?>
             <div>
                 <svg id="back-help" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 15" fill="white" style="transform: rotate(-90deg);">
@@ -134,7 +134,7 @@
                                 $length = mysqli_num_rows($result2);
                                 while ($row2 = mysqli_fetch_array($result2)) {
                                     echo "<button onclick='removeButton(this)'>";
-                                    echo "<img src='/interact/materials/close.png' style='width: 0.67708333vw; height: 0.67708333vw; margin: 0.26041667vw 0.52083333vw 0px;'>";
+                                    echo "<img src='/materials/close.png' style='width: 0.67708333vw; height: 0.67708333vw; margin: 0.26041667vw 0.52083333vw 0px;'>";
                                     echo "<h6>";
                                     echo $row2['category_name'];
                                     echo "</h6>";
@@ -197,7 +197,7 @@
                                     $result = mysqli_query($conn, $query);
                                     while ($row = $result->fetch_assoc()) {
                                         echo "<button onclick='removeButton2(this)'>";
-                                        echo "<img src='/interact/materials/close.png' style='width: 0.67708333vw; height: 0.67708333vw; margin: 0.26041667vw 0.52083333vw 0px;'>";
+                                        echo "<img src='/materials/close.png' style='width: 0.67708333vw; height: 0.67708333vw; margin: 0.26041667vw 0.52083333vw 0px;'>";
                                         echo "<h6>";
                                         echo $row['type'];
                                         echo "</h6>";
@@ -411,7 +411,7 @@
             if (count <= 3) {
                 element.remove();
                 const closeButton = document.createElement("img");
-                closeButton.src = '/interact/materials/close.png';
+                closeButton.src = '/materials/close.png';
                 closeButton.style.width = "0.67708333vw";
                 closeButton.style.height = "0.67708333vw";
                 closeButton.style.margin = "0.26041667vw 0.52083333vw 0px 0.52083333vw"
@@ -447,7 +447,7 @@
             if (count2 < 1) {
                 element.remove();
                 const closeButton = document.createElement("img");
-                closeButton.src = '/interact/materials/close.png';
+                closeButton.src = '/materials/close.png';
                 closeButton.style.width = "0.67708333vw";
                 closeButton.style.height = "0.67708333vw";
                 closeButton.style.margin = "0.26041667vw 0.52083333vw 0px 0.52083333vw"

@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../styles/help.css">
   <link rel="stylesheet" href="../styles/footer.css">
   <link rel="stylesheet" href="../styles/header.css">
-  <link rel="stylesheet" href="/interact/styles/helpSearchResult.css">
+  <link rel="stylesheet" href="/styles/helpSearchResult.css">
   <link rel="shortcut icon" type="image/png" href="../materials/logo/logo-transparent.png">
 </head>
 
@@ -35,11 +35,11 @@
           if ($queryResult > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
               if ($row['type'] == "regulation") {
-                echo "<a href ='/interact/archive/rules-regulations/$row[ref_name].php'><div class='article-box'>";
+                echo "<a href ='/archive/rules-regulations/$row[ref_name].php'><div class='article-box'>";
               } elseif ($row['type'] == "general") {
-                echo "<a href ='/interact/archive/about/$row[ref_name].php'><div class='article-box'>";
+                echo "<a href ='/archive/about/$row[ref_name].php'><div class='article-box'>";
               } elseif ($row['type'] == "account") {
-                echo "<a href ='/interact/archive/account/$row[ref_name].php'><div class='article-box'>";
+                echo "<a href ='/archive/account/$row[ref_name].php'><div class='article-box'>";
               }
               echo "<h3>" . $row['category'] . "</h3>";
               echo "<h4>" . $row['title'] . "</h4>";

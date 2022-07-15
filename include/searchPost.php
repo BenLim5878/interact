@@ -9,7 +9,7 @@ if (isset($query)) {
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_array($result)) {
             $href = $row["ref_ID"];
-            $output .= "<a href='/interact/include/post/showPost.php?id=$href'><h3>" . $row["title"] . '</h3></a>';
+            $output .= "<a href='/include/post/showPost.php?id=$href'><h3>" . $row["title"] . '</h3></a>';
         }
     } else {
         $output .= '<li>No post found </li>';

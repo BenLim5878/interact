@@ -43,9 +43,9 @@
                     </div>
                 </button>
                 <div id="guideline-expand">
-                    <a href="/interact/archive/rules-regulations/guideline1.php">Posting & Commenting</a>
-                    <a href="/interact/archive/rules-regulations/guideline2.php">Promotion</a>
-                    <a href="/interact/archive/rules-regulations/guideline3.php">Be Nice, Be Respectful</a>
+                    <a href="/archive/rules-regulations/guideline1.php">Posting & Commenting</a>
+                    <a href="/archive/rules-regulations/guideline2.php">Promotion</a>
+                    <a href="/archive/rules-regulations/guideline3.php">Be Nice, Be Respectful</a>
                 </div>
                 <!-- Instruction -->
                 <button id="instruction">
@@ -57,12 +57,12 @@
                     </div>
                 </button>
                 <div id="instruction-expand">
-                    <a href="/interact/archive/rules-regulations/instruction1.php">Register an account</a>
-                    <a href="/interact/archive/rules-regulations/instruction2.php">Log In</a>
-                    <a href="/interact/archive/rules-regulations/instruction3.php">Create a post</a>
-                    <a href="/interact/archive/rules-regulations/instruction4.php">How can I delete a post?</a>
-                    <a href="/interact/archive/rules-regulations/instruction5.php">Edit account details</a>
-                    <a href="/interact/archive/rules-regulations/instruction6.php">Logout from Interact</a>
+                    <a href="/archive/rules-regulations/instruction1.php">Register an account</a>
+                    <a href="/archive/rules-regulations/instruction2.php">Log In</a>
+                    <a href="/archive/rules-regulations/instruction3.php">Create a post</a>
+                    <a href="/archive/rules-regulations/instruction4.php">How can I delete a post?</a>
+                    <a href="/archive/rules-regulations/instruction5.php">Edit account details</a>
+                    <a href="/archive/rules-regulations/instruction6.php">Logout from Interact</a>
                 </div>
                 <!-- Policy -->
                 <button id="policy">
@@ -74,11 +74,11 @@
                     </div>
                 </button>
                 <div id="policy-expand">
-                    <a href="/interact/archive/rules-regulations/policy1.php">What are the rules?</a>
-                    <a href="/interact/archive/rules-regulations/policy2.php">Restriction on violent content</a>
-                    <a href="/interact/archive/rules-regulations/policy3.php">Is posting someone's private or personal information okay?</a>
-                    <a href="/interact/archive/rules-regulations/policy4.php">Legal Restriction on Content</a>
-                    <a href="/interact/archive/rules-regulations/policy5.php">Pornography and sex-related content restriction</a>
+                    <a href="/archive/rules-regulations/policy1.php">What are the rules?</a>
+                    <a href="/archive/rules-regulations/policy2.php">Restriction on violent content</a>
+                    <a href="/archive/rules-regulations/policy3.php">Is posting someone's private or personal information okay?</a>
+                    <a href="/archive/rules-regulations/policy4.php">Legal Restriction on Content</a>
+                    <a href="/archive/rules-regulations/policy5.php">Pornography and sex-related content restriction</a>
                 </div>
                 <!-- Role -->
                 <button id="role">
@@ -90,8 +90,8 @@
                     </div>
                 </button>
                 <div id="role-expand">
-                    <a href="/interact/archive/rules-regulations/role1.php">Member</a>
-                    <a href="/interact/archive/rules-regulations/role2.php">What is moderator?</a>
+                    <a href="/archive/rules-regulations/role1.php">Member</a>
+                    <a href="/archive/rules-regulations/role2.php">What is moderator?</a>
                 </div>
                 <!-- Copyright -->
                 <button id="copyright">
@@ -103,9 +103,9 @@
                     </div>
                 </button>
                 <div id="copyright-expand">
-                    <a href="/interact/archive/rules-regulations/copyright1.php">Copyright at Interact</a>
-                    <a href="/interact/archive/rules-regulations/copyright2.php">What types of works does copyright protect?</a>
-                    <a href="/interact/archive/rules-regulations/copyright3.php">How to report an unauthorized copy of work on Interact</a>
+                    <a href="/archive/rules-regulations/copyright1.php">Copyright at Interact</a>
+                    <a href="/archive/rules-regulations/copyright2.php">What types of works does copyright protect?</a>
+                    <a href="/archive/rules-regulations/copyright3.php">How to report an unauthorized copy of work on Interact</a>
                 </div>
             </div>
         </div>

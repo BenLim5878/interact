@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="shortcut icon" type="image/png" href="/interact/materials/logo/logo-transparent.png">
+    <link rel="shortcut icon" type="image/png" href="/materials/logo/logo-transparent.png">
     <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/interact/styles/showPost.css">
-    <link rel="stylesheet" href="/interact/styles/header2.css">
-    <link rel="stylesheet" href="/interact/styles/quill.css">
+    <link rel="stylesheet" href="/styles/showPost.css">
+    <link rel="stylesheet" href="/styles/header2.css">
+    <link rel="stylesheet" href="/styles/quill.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
     <title>
@@ -34,7 +34,7 @@
         $query = "SELECT * FROM post WHERE ref_ID ='$id'";
         $result = mysqli_query($conn, $query);
         if (mysqli_num_rows($result) == 0) {
-            header("Location: /interact/userPage.php");
+            header("Location: /userPage.php");
             exit();
         }
         include '../header2.php'
@@ -537,12 +537,12 @@
                             while ($row3 = $result3->fetch_assoc()) {
                                 if ($origin) {
                                     $refID = $row3['ref_ID'];
-                                    echo "<a id='post-lists' href='/interact/include/post/showPost.php?id=$refID&origin=$origin'>";
+                                    echo "<a id='post-lists' href='/include/post/showPost.php?id=$refID&origin=$origin'>";
                                     echo $row3['title'];
                                     echo "</a>";
                                 } else {
                                     $refID = $row3['ref_ID'];
-                                    echo "<a id='post-lists' href='/interact/include/post/showPost.php?id=$refID'>";
+                                    echo "<a id='post-lists' href='/include/post/showPost.php?id=$refID'>";
                                     echo $row3['title'];
                                     echo "</a>";
                                 }
@@ -556,12 +556,12 @@
                             while ($row3 = $result3->fetch_assoc()) {
                                 if ($origin) {
                                     $refID = $row3['ref_ID'];
-                                    echo "<a id='post-lists' href='/interact/include/post/showPost.php?id=$refID&origin=$origin'>";
+                                    echo "<a id='post-lists' href='/include/post/showPost.php?id=$refID&origin=$origin'>";
                                     echo $row3['title'];
                                     echo "</a>";
                                 } else {
                                     $refID = $row3['ref_ID'];
-                                    echo "<a id='post-lists' href='/interact/include/post/showPost.php?id=$refID'>";
+                                    echo "<a id='post-lists' href='/include/post/showPost.php?id=$refID'>";
                                     echo $row3['title'];
                                     echo "</a>";
                                 }
@@ -573,12 +573,12 @@
                             while ($row3 = $result3->fetch_assoc()) {
                                 if ($origin) {
                                     $refID = $row3['ref_ID'];
-                                    echo "<a id='post-lists' href='/interact/include/post/showPost.php?id=$refID&origin=$origin'>";
+                                    echo "<a id='post-lists' href='/include/post/showPost.php?id=$refID&origin=$origin'>";
                                     echo $row3['title'];
                                     echo "</a>";
                                 } else {
                                     $refID = $row3['ref_ID'];
-                                    echo "<a id='post-lists' href='/interact/include/post/showPost.php?id=$refID'>";
+                                    echo "<a id='post-lists' href='/include/post/showPost.php?id=$refID'>";
                                     echo $row3['title'];
                                     echo "</a>";
                                 }
@@ -931,7 +931,7 @@
                 var link = document.createElement('A')
                 //
                 h6.appendChild(edit)
-                editButton.src = '/interact/materials/draw.png';
+                editButton.src = '/materials/draw.png';
                 var container = document.querySelector(`#reply-option-container${id} div`)
                 link.appendChild(editButton)
                 link.appendChild(h6)
@@ -989,7 +989,7 @@
             })
             $.ajax({
                 type: "GET",
-                url: "/interact/include/updateCategoryMod.php",
+                url: "/include/updateCategoryMod.php",
                 data: {
                     postID: refID,
                     categoryList: selectedCategory
@@ -1007,7 +1007,7 @@
             $.confirm({
                 icon: 'fas fa-edit',
                 title: '<h3 class=popout-title>Modify category</h3>',
-                content: `url:/interact/include/moderatorModify.php?id=${postRef}`,
+                content: `url:/include/moderatorModify.php?id=${postRef}`,
                 draggable: false,
                 buttons: {
                     cancel: {

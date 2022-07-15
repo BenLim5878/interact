@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -8,7 +9,7 @@
   <link rel="shortcut icon" type="image/png" href="materials/logo/logo-transparent.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/interact/styles/style.css">
+  <link rel="stylesheet" href="/styles/style.css">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://kit.fontawesome.com/2fbbb4bb77.js" crossorigin="anonymous"></script>
 </head>
@@ -29,7 +30,7 @@
     <div id="login-greeting">
       <span id="logo-loginregister"></span>
       <h1>Welcome Back.</h1>
-      <h2>New to Interact? <a href="/interact/register.php">Sign Up</a></h2>
+      <h2>New to Interact? <a href="/register.php">Sign Up</a></h2>
     </div>
     <form id="signin" action="include/login.inc.php" method="post" autocomplete="off">
       <div class="inputGroup" style="margin-bottom:1.04166vw;">
@@ -60,7 +61,7 @@
         </svg>
         Log In
       </button>
-      <h3>By continuing you accept our <a style="font-size:0.67708333333vw;" href="/interact/archive/rules-regulations/policy1.php">Terms of Use</a> and <a style="font-size:0.67708333333vw;" href="/interact/archive/about/safeInteract2.php">Privacy Policy</a>.</h3>
+      <h3>By continuing you accept our <a style="font-size:0.67708333333vw;" href="/archive/rules-regulations/policy1.php">Terms of Use</a> and <a style="font-size:0.67708333333vw;" href="/archive/about/safeInteract2.php">Privacy Policy</a>.</h3>
     </form>
 
   </section>

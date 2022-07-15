@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles/userPage.css">
     <link rel="stylesheet" href="styles/header2.css">
     <link rel="shortcut icon" type="image/png" href="materials/logo/logo-transparent.png">
-    <link rel="stylesheet" href="/interact/styles/quill.css">
+    <link rel="stylesheet" href="/styles/quill.css">
 </head>
 
 <body>
@@ -55,7 +55,7 @@
         function retrievePostList(postCount) {
             $.ajax({
                 type: "GET",
-                url: '/interact/include/retrivePostList.php',
+                url: '/include/retrivePostList.php',
                 data: {
                     postCount: postCount
                 },

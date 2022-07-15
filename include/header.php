@@ -10,22 +10,22 @@ session_start();
       <path d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0" />
     </svg>
   </div>
-  <a class="logo" href=/interact/index.php>
+  <a class="logo" href=/index.php>
     <div class="logo-image"></div>
     <h1>Interact</h1>
   </a>
   <nav>
     <ul class="top-menu">
       <li>
-        <a href="/interact/about.php">About</a>
+        <a href="/about.php">About</a>
       </li>
       <li>
-        <a href="/interact/help.php">Help</a>
+        <a href="/help.php">Help</a>
       </li>
       <li>
-        <a href='/interact/login.php'>Login</a>
+        <a href='/login.php'>Login</a>
       </li>
-      <a id='important-content' href='/interact/register.php'>
+      <a id='important-content' href='/register.php'>
         <h1 id='important-text'>Register</h1>
       </a>
     </ul>

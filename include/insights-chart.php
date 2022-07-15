@@ -5,7 +5,7 @@
 <div id="categoryTrendStats"></div>
 <div id="categoryPostStats"></div>
 <div id="categoryViewStats"></div>
-<script src="/interact/include/insights-chart.js"></script>
+<script src="/include/insights-chart.js"></script>
 <script>
     var proportionMember = '';
     var proportionModerator = '';
@@ -18,7 +18,7 @@
     function retrieveData() {
         $.ajax({
             type: "GET",
-            url: "/interact/include/retrieveChartData.php",
+            url: "/include/retrieveChartData.php",
             dataType: "json",
             success: function(response) {
                 proportionMember = response.proportionMember;

@@ -10,7 +10,7 @@ echo $conn->error;
 while ($row = $result->fetch_assoc()) {
     $ownerID = $row['usersId'];
     if ($user_id != $ownerID) {
-        header("location: /interact/include/post/showPost.php?id=$postID");
+        header("location: /include/post/showPost.php?id=$postID");
         exit();
         $conn->close();
     } else {
@@ -21,7 +21,7 @@ while ($row = $result->fetch_assoc()) {
         $cookie_value = "yes";
         setcookie($cookie_name, $cookie_value, time() + (1000 * 30), "/");
 
-        header("location: /interact/include/post/showPost.php?id=$postID");
+        header("location: /include/post/showPost.php?id=$postID");
         exit();
         $conn->close();
     }

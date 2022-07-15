@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/interact/styles/moderatorModify.css">
+<link rel="stylesheet" href="/styles/moderatorModify.css">
 <?php
 include 'dbh.inc.php';
 $categoryCount = 0;
@@ -28,7 +28,7 @@ while ($row = $result->fetch_assoc()) {
         foreach ($categoryName as $aCategory) {
             if ($aCategory == $categoryRetrievedName) {
                 $response .= "<button class='chosenCategory'>";
-                $response .= "<img src='/interact/materials/close.png'>";
+                $response .= "<img src='/materials/close.png'>";
                 $response .= "<h6>";
                 $response .= "$categoryRetrievedName";
                 $key = array_search("$aCategory", $categoryName);
@@ -84,7 +84,7 @@ echo $response;
         if (count <= 2) {
             $(this).addClass('chosenCategory');
             $(this).removeClass('categoryList');
-            $(this).prepend("<img src='/interact/materials/close.png'>")
+            $(this).prepend("<img src='/materials/close.png'>")
             count += 1;
         }
     });

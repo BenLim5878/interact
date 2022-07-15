@@ -28,7 +28,7 @@
           <h3>Join over a community of hundred students and lecturers on academic discussion.</h2>
             <div class="links">
               <li id="moreInfo"><a href="#about-bannerdeco">More Info</a></li>
-              <li id="jointheclub-content"><a id="jointheclub" href="register.php">Join the club</a> </li>
+              <li id="jointheclub-content"><a id="jointheclub" href="/register.php">Join the club</a> </li>
             </div>
         </div>
         <div class="image"></div>

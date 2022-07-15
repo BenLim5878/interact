@@ -6,13 +6,13 @@ $query =  "SELECT * FROM post WHERE usersId='$userID' ORDER BY timePosted DESC";
 $result = mysqli_query($conn, $query);
 echo $conn->error;
 if (mysqli_num_rows($result) == 0) {
-    echo "<img id=noPostFoundImg src='/interact/materials/no-data.png'>";
+    echo "<img id=noPostFoundImg src='/materials/no-data.png'>";
     echo "<h6 id=noPostFound>All the posts created by you will be shown here...</h6>";
 } else {
     while ($row = $result->fetch_assoc()) {
         echo "<div class='posts-list'>";
         echo "<h5>" . $row['type'] . "</h5>";
-        echo "<a href='/interact/include/post/showPost.php?id=" . $row['ref_ID'] . "'>";
+        echo "<a href='/include/post/showPost.php?id=" . $row['ref_ID'] . "'>";
         echo "<h2>" . $row['title'] . "</h2>";
         echo "</a>";
         echo "<div id='homepage-deco'></div>";
@@ -35,7 +35,7 @@ if (mysqli_num_rows($result) == 0) {
         }
         echo "</h4>";
         //Category
-        echo "<a class='readMore' href='/interact/include/post/showPost.php?id=" . $row['ref_ID'] . "'><h6>More...</h6></a>";
+        echo "<a class='readMore' href='/include/post/showPost.php?id=" . $row['ref_ID'] . "'><h6>More...</h6></a>";
         echo "<h5>" . $row['views'] . " views" . "</h5>";
         echo "</div>";
         echo "</div>";

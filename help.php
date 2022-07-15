@@ -71,7 +71,7 @@
             <div id="personalSupport">
                 <div id="line-deco"></div>
                 <h3>Log in for personalized support</h3>
-                <a href="/interact/login.php" id="logIn">
+                <a href="/login.php" id="logIn">
                     <h4>Log In</h4>
                 </a>
                 <div id="line-deco"></div>

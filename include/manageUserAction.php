@@ -8,7 +8,7 @@ if ($changeType == 'role') {
         mysqli_query($conn, "UPDATE users SET role='$role' WHERE usersId='$ajaxData[$i]'");
         if ($role == "moderator") {
             $notificationContent = "Congratulations, you have been promoted to moderator!";
-            mysqli_query($conn, "INSERT INTO notification (usersId,type, message,status,link) VALUES ('$ajaxData[$i]','promotion','$notificationContent','unread','/interact/include/user/myAccount.php')");
+            mysqli_query($conn, "INSERT INTO notification (usersId,type, message,status,link) VALUES ('$ajaxData[$i]','promotion','$notificationContent','unread','/include/user/myAccount.php')");
             echo $conn->error;
         }
     }

@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="shortcut icon" type="image/png" href="/interact/materials/logo/logo-transparent.png">
+    <link rel="shortcut icon" type="image/png" href="/materials/logo/logo-transparent.png">
     <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/interact/styles/quill.css">
-    <link rel="stylesheet" href="/interact/styles/header2.css">
-    <link rel="stylesheet" href="/interact/styles/userRequest.css">
+    <link rel="stylesheet" href="/styles/quill.css">
+    <link rel="stylesheet" href="/styles/header2.css">
+    <link rel="stylesheet" href="/styles/userRequest.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <title>Request</title>
 </head>
@@ -42,13 +42,13 @@
             var content = quill.root.innerHTML.trim();
             $.ajax({
                 type: 'GET',
-                url: '/interact/include/submitRequest.php',
+                url: '/include/submitRequest.php',
                 data: {
                     subject: subject,
                     content: content
                 }
             });
-            window.location.href = "http://localhost/interact/userPage.php"
+            window.location.href = "http://localhost/userPage.php"
         });
     </script>
     <script>
@@ -157,11 +157,11 @@
         $(document).ready(function() {
             $('#rulesLink').click(function(e) {
                 e.preventDefault();
-                window.open('/interact/rules.php')
+                window.open('/rules.php')
             });
             $('#accountSettingLink').click(function(e) {
                 e.preventDefault();
-                window.open('/interact/accountSetting.php')
+                window.open('/accountSetting.php')
             });
         });
     </script>

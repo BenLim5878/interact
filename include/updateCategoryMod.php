@@ -40,7 +40,7 @@ while ($post = $posts->fetch_assoc()) {
     $postTitle = $post['title'];
     $postUserId = $post['usersId'];
     $notificationContent = "Your post $postTitle has been arranged by moderator";
-    mysqli_query($conn, "INSERT INTO notification (usersId,type, message,status,link) VALUES ($postUserId,'post modification','$notificationContent','unread','/interact/include/post/showPost.php?id=$refID')");
+    mysqli_query($conn, "INSERT INTO notification (usersId,type, message,status,link) VALUES ($postUserId,'post modification','$notificationContent','unread','/include/post/showPost.php?id=$refID')");
     echo $conn->error;
 }
 $cookie_name = "newEditPost";

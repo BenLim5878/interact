@@ -2,7 +2,7 @@
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <div id="proportionUserStats"></div>
 <div id="categoryPostStats"></div>
-<script src="/interact/include/chart.js"></script>
+<script src="/include/chart.js"></script>
 <script>
     var proportionMember = '';
     var proportionModerator = '';
@@ -15,7 +15,7 @@
     function retrieveData() {
         $.ajax({
             type: "GET",
-            url: "/interact/include/retrieveChartData.php",
+            url: "/include/retrieveChartData.php",
             dataType: "json",
             success: function(response) {
                 proportionMember = response.proportionMember;
