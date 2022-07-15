@@ -15,7 +15,7 @@
 
 <body onload="textArea()">
     <div class="wrapper">
-        <?php include './../../include/header.php>'; ?>
+        <?php include '/include/header.php>'; ?>
         <!-- Path links -->
         <div id="pathway-links">
             <a href="/help.php" id="help-back">Help</a>
@@ -74,7 +74,7 @@ include '../../include/dbRetriveAbout.php';
         </div>
     </div>
     <footer>
-        <?php include './../../include/footer.php'; ?>
+        <?php include '/include/footer.php'; ?>
     </footer>
     <script>
         function textArea() {
