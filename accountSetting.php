@@ -17,7 +17,7 @@
 <body>
     <div class="wrapper">
         <Header>
-            <?php include 'include/header.php'; ?>
+            <?php include './include/header.php'; ?>
         </Header>
         <div class="inner-wrapper" style='margin-bottom:133px'>
             <a href="help.php" id="help-back">

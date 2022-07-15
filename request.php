@@ -17,7 +17,7 @@
 
 <body>
     <header>
-        <?php include 'include/header2.php' ?>
+        <?php include './include/header2.php' ?>
     </header>
     <main>
         <div class="content-window">
