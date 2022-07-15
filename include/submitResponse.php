@@ -67,7 +67,7 @@ if ($user_id != $postUserID) {
     while ($userNameRow = $userName->fetch_assoc()) {
         $userFullName = $userNameRow['usersFname'] . ' ' . $userNameRow['usersLname'];
         $notificationContent = "$userFullName has replied on your post $post_title";
-        mysqli_query($conn, "INSERT INTO notification (usersId,type, message,status,link) VALUES ($postUserID,'comment','$notificationContent','unread','/include/post/showPost.php?id=$content->id')");
+        mysqli_query($conn, "INSERT INTO notification (usersId,type, message,status,link) VALUES ($postUserID,'comment','$notificationContent','unread','./include/post/showPost.php?id=$content->id')");
         echo $conn->error;
     }
 }
