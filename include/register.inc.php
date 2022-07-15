@@ -37,8 +37,6 @@ if (isset($_POST["submit"])) {
     header("location: ../register.php?error=accountexists");
     exit();
   }
-
-  createUser($conn, $Fname, $Lname, $email, $pwd);
 } else {
   header("location: ../register.php");
   exit();
