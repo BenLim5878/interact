@@ -1,10 +1,11 @@
 <?php
-$serverName = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName = "interact";
 
-$conn = mysqli_connect($serverName, $dbUsername, $dbPassword, $dbName);
+$serverName = "us-cdbr-east-06.cleardb.net";
+$dBUsername = "b8085750c4cb45";
+$dBPassword = "741318c2";
+$dBName = "heroku_eed5da92befa448";
+
+$conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
 $query =  "SELECT * FROM rulesregulations WHERE category = '$category' AND rulesRegulations_ID = '$ID'";
 $result = mysqli_query($conn, $query);
 if ($data == 'content') {

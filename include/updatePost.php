@@ -8,10 +8,10 @@ $desc =  str_replace(array('"', "'"), array('\"', "\'"), $object->content);
 $title = str_replace(array('"', "'"), array('\"', "\'"), $object->title);
 $user_id = $_SESSION['userid'];
 
-$serverName = "localhost";
-$dBUsername = "root";
-$dBPassword = "";
-$dBName = "interact";
+$serverName = "us-cdbr-east-06.cleardb.net";
+$dBUsername = "b8085750c4cb45";
+$dBPassword = "741318c2";
+$dBName = "heroku_eed5da92befa448";
 
 $conn =  mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
 
