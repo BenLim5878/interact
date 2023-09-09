@@ -8,10 +8,10 @@ $desc =  str_replace(array('"', "'"), array('\"', "\'"), $object->content);
 $title = str_replace(array('"', "'"), array('\"', "\'"), $object->title);
 $user_id = $_SESSION['userid'];
 
-$serverName = "us-cdbr-east-06.cleardb.net";
-$dBUsername = "b8085750c4cb45";
-$dBPassword = "741318c2";
-$dBName = "heroku_eed5da92befa448";
+$serverName = "sql307.infinityfree.com";
+$dBUsername = "if0_34999721";
+$dBPassword = "NqBGef7XU2spD";
+$dBName = "if0_34999721_interact";
 
 $conn =  mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
 

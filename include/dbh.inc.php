@@ -1,10 +1,9 @@
 <?php
 
-$cleardb_url = parse_url(getenv("mysql://b8085750c4cb45:741318c2@us-cdbr-east-06.cleardb.net/heroku_eed5da92befa448?reconnect=true"));
-$cleardb_server = "us-cdbr-east-06.cleardb.net";
-$cleardb_username = "b8085750c4cb45";
-$cleardb_password = "741318c2";
-$cleardb_db = "heroku_eed5da92befa448";
+$cleardb_server = "sql307.infinityfree.com";
+$cleardb_username = "if0_34999721";
+$cleardb_password = "NqBGef7XU2spD";
+$cleardb_db = "if0_34999721_interact";
 $active_group = 'default';
 $query_builder = TRUE;
 
