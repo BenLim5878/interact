@@ -16,7 +16,7 @@
 </ul>
 
 <h2>Hosting</h2>
-<p>The Interact system is hosted on <strong>InfinityFree</strong>, a leading free web hosting platform.</p>
+<p>The Interact system is hosted on <strong>InfinityFree</strong>, a leading free web hosting platform. The website URL: <a href="http://interact.kesug.com/">http://interact.kesug.com/</a></p>
 
 <h2>Database Backend</h2>
 <p>For its database needs, the system utilizes <strong>MySQL</strong> as its primary backend.</p>
@@ -66,8 +66,8 @@
 </ol>
 
 <h2>System Image Preview</h2>
-![image](https://github.com/BenLim5878/interact/assets/77265089/8014b46f-0d32-4276-b54e-73d94b33462a)
-![image](https://github.com/BenLim5878/interact/assets/77265089/6bd2e878-74f1-4453-8082-5a4314c0a6d6)
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/77265089/266801771-8014b46f-0d32-4276-b54e-73d94b33462a.png" />
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/77265089/266801785-6bd2e878-74f1-4453-8082-5a4314c0a6d6.png" />
 
 
 
