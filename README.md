@@ -16,7 +16,7 @@
 </ul>
 
 <h2>Hosting</h2>
-<p>The Interact system is hosted on <strong>InfinityFree</strong>, a leading free web hosting platform. The website URL: <a href="https://interact.kesug.com/">http://interact.kesug.com/</a></p>
+<p>The Interact system is hosted on <strong>InfinityFree</strong>, a leading free web hosting platform. The website URL: <a href="https://interact.kesug.com/">https://interact.kesug.com/</a></p>
 
 <h2>Database Backend</h2>
 <p>For its database needs, the system utilizes <strong>MySQL</strong> as its primary backend.</p>
